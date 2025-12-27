@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/layouts/Navbar";
-import { ThemeProvider } from "./components/ui/theme-provider";
+import { ThemeProvider } from "./components/landing/theme-provider";
 import Home from "./components/pages/Home";
+import { Navbar } from "./components/common/Navbar";
 
 function App() {
   return (

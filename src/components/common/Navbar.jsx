@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "./Container";
 import ThemeToggel from "./ThemeToggel";
 import { Link } from "react-router-dom";
+import Container from "../layouts/Container";
 
 const navList = [
   { name: "Work", href: "/work" },

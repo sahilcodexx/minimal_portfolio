@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -21,6 +23,7 @@
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0",
     "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
     "sqlite3": "^5.1.7",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18"

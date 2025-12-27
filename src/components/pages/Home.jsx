@@ -1,12 +1,13 @@
 import React from "react";
 import Container from "../layouts/Container";
-import IdeTimer from "../ui/IdeTimer";
+import Hero from "../layouts/Hero";
+
 
 const Home = () => {
   return (
     <Container>
-      <div>Home
-        <IdeTimer/>
+      <div>
+        <Hero />
       </div>
     </Container>
   );
