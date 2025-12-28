@@ -4,12 +4,13 @@ import Html from "@/technologies/Html";
 import JavaScript from "@/technologies/JavaScript";
 import TailwindCss from "@/technologies/TailwindCss";
 
-const Experience = [
+const experience = [
   {
     company: "Zero Dimensions",
     position: "Frontend Developer Intern",
     location: "Ahmedabad, India (On-Site)",
-    image: "/company/loop.png",
+    image:
+      "https://ramx.in/_next/image?url=%2Fcompany%2Fpromote.png&w=256&q=75",
     description: [
       "Developed and maintained web applications using HTML, CSS, and JavaScript.",
       "Collaborated with cross-functional teams to deliver high-quality software on time.",
@@ -40,14 +41,14 @@ const Experience = [
         icon: <Figma />,
       },
       {
-        name: "BootStrap",
+        name: "TailwindCss",
         href: "https://getbootstrap.com/",
         icon: <TailwindCss />,
       },
     ],
-    x: "https://x.com/Flameloop149578",
-    linkedin: "https://www.linkedin.com/company/flameloop",
+    x: "https://zerodimensions.in",
+    linkedin: "https://in.linkedin.com/company/zerodimensions",
   },
 ];
 
-export default Experience;
+export default experience;

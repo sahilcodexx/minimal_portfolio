@@ -9,13 +9,20 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion as Motion } from "motion/react";
 
 import { Link } from "react-router-dom";
 
 const SocialLinks = () => {
   return (
     <Container className={`pl-0`}>
-      <div className="mt-8 flex gap-2 ">
+      <Motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="mt-8 flex gap-2"
+      >
         {socialLinks.map((link) => (
           <Tooltip key={link.name} delayDuration={0}>
             <TooltipTrigger asChild>
@@ -32,7 +39,7 @@ const SocialLinks = () => {
             </TooltipContent>
           </Tooltip>
         ))}
-      </div>
+      </Motion.div>
     </Container>
   );
 };

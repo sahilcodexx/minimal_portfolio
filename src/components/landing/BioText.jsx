@@ -4,10 +4,17 @@ import MongoDb from "@/svgs/MongoDb";
 import NodeJs from "@/svgs/NodeJs";
 import ReactJs from "@/svgs/ReactJs";
 import React from "react";
+import { motion as Motion } from "motion/react";
 
 const BioText = () => {
   return (
-    <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-base whitespace-pre-wrap text-neutral-500 md:text-lg">
+    <Motion.div
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-base whitespace-pre-wrap text-neutral-500 md:text-lg"
+    >
       <span className="whitespace-pre-wrap">
         I build interactive web apps using
       </span>
@@ -30,7 +37,7 @@ const BioText = () => {
       <span className="whitespace-pre-wrap">
         , driven by a keen eye for design.
       </span>
-    </div>
+    </Motion.div>
   );
 };
 
