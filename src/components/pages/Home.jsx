@@ -3,8 +3,8 @@ import Container from "../layouts/Container";
 import Hero from "../layouts/Hero";
 import ExperienceCard from "../layouts/ExperienceCard";
 import Experience from "@/Experience/Experience";
-import Project from "@/projects/Project";
-import ProjectCard from "@/projects/ProjectCard";
+import Project from "@/app/projects/Project";
+import ProjectCard from "@/app/projects/ProjectCard";
 
 const Home = () => {
   return (
