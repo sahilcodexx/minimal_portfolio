@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "./components/landing/theme-provider";
 import Home from "./components/pages/Home";
 import { Navbar } from "./components/common/Navbar";
+import Blogs from "./components/pages/Blogs";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="blogs" element={<Blogs />} />
       </Routes>
     </ThemeProvider>
   );

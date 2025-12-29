@@ -33,7 +33,7 @@ const Experience = () => {
                   className="w-12 rounded-md"
                 />
               </div>
-              <div className="flex w-full justify-between">
+              <div className="flex flex-col justify-between md:flex-row w-full">
                 <div className="flex flex-col">
                   <div className="flex w-full items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
