@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 
-import { BlogComponents } from "@/blog/BlogComponent";
 import Container from "@/components/layouts/Container";
 import { ProjectComponents } from "./ProjectComponents";
 import NestJs from "@/technologies/NextJS";
@@ -17,17 +16,17 @@ const ProjectContent = () => {
   const [meta, setMeta] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const projects = import.meta.glob("/src/components/data/projects/*.md", {
+    as: "raw",
+  });
   useEffect(() => {
     const loadBlog = async () => {
       try {
-        setLoading(true);
+        const loader = projects[`/src/components/data/projects/${slug}.md`];
 
-        const res = await fetch(`/src/components/data/projects/${slug}.md`);
+        if (!loader) throw new Error("Project not found");
 
-        if (!res.ok) throw new Error("Project not Found");
-
-        const text = await res.text();
+        const text = await loader();
         const { data, content } = matter(text);
 
         setMeta(data);
@@ -60,7 +59,10 @@ const ProjectContent = () => {
 
   return (
     <Container>
-      <h1>{meta.title}<NestJs/></h1>
+      <h1>
+        {meta.title}
+        <NestJs />
+      </h1>
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}

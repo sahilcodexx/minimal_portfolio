@@ -12,10 +12,9 @@ import LinkedIn from "@/svgs/LinkedIn";
 import Skill from "@/components/common/Skills";
 import { motion as Motion } from "motion/react";
 
-const Experience = () => {
+const ExperienceContent = () => {
   return (
     <Container>
-      <SectionHeading subHeading="Featured" heading="Experience" />
       {experience.map((items) => {
         return (
           <Motion.div
@@ -33,7 +32,7 @@ const Experience = () => {
                   className="w-12 rounded-md"
                 />
               </div>
-              <div className="flex flex-col justify-between md:flex-row w-full">
+              <div className="flex w-full flex-col justify-between md:flex-row">
                 <div className="flex flex-col">
                   <div className="flex w-full items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
@@ -125,4 +124,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceContent;

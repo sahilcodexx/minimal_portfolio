@@ -1,12 +1,28 @@
-import React from 'react'
-import Container from '../layouts/Container'
+import React from "react";
+import Container from "../layouts/Container";
+import { Separator } from "../ui/separator";
+import ExperienceContent from "@/Experience/ExperienceContent";
 
 const Work = () => {
   return (
-    <Container>
-        Work
+    <Container className={"py-16"}>
+      <div className="space-y-8">
+        {/* Header */}
+        <div className="space-y-4 text-center">
+          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            Work Experience
+          </h1>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            My work experiences across different companies and roles.
+          </p>
+        </div>
+      </div>
+      <Separator />
+      <div className="space-y-6">
+        <ExperienceContent />
+      </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

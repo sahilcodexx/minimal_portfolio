@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Spotify = () => {
-  return (
-    <div>Spotify</div>
-  )
-}
+  return <div>Spotify</div>;
+};
 
-export default Spotify
+export default Spotify;

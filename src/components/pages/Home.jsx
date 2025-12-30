@@ -1,19 +1,24 @@
 import React from "react";
 import Container from "../layouts/Container";
 import Hero from "../layouts/Hero";
-import ExperienceCard from "../layouts/ExperienceCard";
-import Experience from "@/Experience/Experience";
 import Project from "@/app/projects/Project";
-import ProjectCard from "@/app/projects/ProjectCard";
+import AboutMe from "../landing/AboutMe";
+import Featured from "../landing/Featured";
+import Blog from "@/blog/Blog";
+import ExperienceCard from "@/Experience/ExperienceCard";
+import Spotify from "../landing/Spotify";
 
 const Home = () => {
   return (
     <Container className={`min-h-[250vh]`}>
       <div>
         <Hero />
-        <Experience />
-        <Project/>
-        <ProjectCard/>
+        <ExperienceCard />
+        <Project />
+        <AboutMe />
+        <Featured />
+        <Blog />
+        <Spotify/> 
       </div>
     </Container>
   );

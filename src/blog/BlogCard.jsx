@@ -14,15 +14,14 @@ import {
 } from "@/components/ui/tooltip";
 import Website from "@/svgs/Website";
 import Github from "@/svgs/Github";
-import JavaScript from "@/technologies/JavaScript";
 import { ArrowRight } from "lucide-react";
-import { ProjectCardData } from "@/config/projects/ProjectCardData";
-const ProjectCard = () => {
+import { BlogCardData } from "@/config/blog/BlogCardData";
+const BlogCard = () => {
   return (
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
     >
-      {ProjectCardData.map((items) => {
+      {BlogCardData.map((items) => {
         return (
           <Card
             key={items.title}
@@ -137,4 +136,4 @@ const ProjectCard = () => {
   );
 };
 
-export default ProjectCard;
+export default BlogCard;

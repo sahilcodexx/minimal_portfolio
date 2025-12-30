@@ -145,3 +145,6 @@
   opacity: 0.4;
   filter: blur(3px);
 }
+.github-calendar .contrib-column {
+  display: none;
+}
