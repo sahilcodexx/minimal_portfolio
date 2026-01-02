@@ -102,7 +102,7 @@ const ProjectCard = () => {
               </div>
             </CardContent>
             {items.details && (
-              <CardFooter className="flex justify-between p-6 pt-0">
+              <CardFooter className="flex items-center justify-between p-6 pt-0">
                 <div
                   className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
                     items.isWorking
@@ -124,7 +124,7 @@ const ProjectCard = () => {
                 </div>
                 <Link
                   to={items.projectDetailsPageSlug}
-                  className="text-secondary hover:text-primary flex items-center gap-2 text-sm underline-offset-4 transition-colors hover:underline"
+                  className="text-secondary hover:text-primary flex items-center gap-2 text-sm underline-offset-4 transition-colors duration-200 ease-[ease] hover:underline"
                 >
                   View Details <ArrowRight className="size-4" />
                 </Link>

@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
+import { ProjectCardData } from "@/config/projects/ProjectCardData";
+import ProjectCard from "@/app/projects/ProjectCard";
 
 const Projects = () => {
   return (
@@ -16,6 +18,13 @@ const Projects = () => {
         </div>
       </div>
       <Separator />
+      <div className="flex items-center gap-2">
+        <h3 className="text-2xl font-bold">Latest Posts</h3>
+        <span className="text-sm">({ProjectCardData.length} posts)</span>
+      </div>
+      <div>
+        <ProjectCard />
+      </div>
     </Container>
   );
 };

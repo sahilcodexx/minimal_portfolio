@@ -24,7 +24,7 @@ const BlogCard = () => {
       {BlogCardData.map((items) => {
         return (
           <Card
-            key={items.title}
+            key={items.id}
             className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800"
           >
             <CardHeader className="p-0">

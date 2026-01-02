@@ -11,12 +11,15 @@ import ExpressJs from "@/technologies/ExpressJs";
 
 const AboutMe = () => {
   return (
-    <Container className={`mt-10`}>
+    <Container className={`mt-20`}>
       <SectionHeading subHeading={"About"} heading={"Me"} />
-      <div className="mt-8 flex gap-5">
-        <div className="box-border rounded-md bg-blue-300 px-3 duration-200 dark:bg-yellow-300">
-          <img src="./Avatar.png" alt="img" className="w-120" />
-        </div>
+      <div className="mt-8 flex flex-col gap-5 md:flex-row">
+        <img
+          src="./Avatar.png"
+          alt="img"
+          className="size-60 w-50 rounded-md  bg-blue-300 md:w-120 dark:bg-yellow-300"
+        />
+
         <div className="mt-3 flex flex-col justify-between">
           <div>
             <h3 class="text-2xl font-bold">Sahil Singh</h3>

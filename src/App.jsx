@@ -7,6 +7,7 @@ import ProjectContent from "./app/projects/ProjectContent";
 import Work from "./components/pages/Work";
 import BlogContent from "./blog/BlogContent";
 import Projects from "./components/pages/Projects";
+import Footer from "./components/common/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="projects/:slug" element={<ProjectContent />} />
         <Route path="blogs/:slug" element={<BlogContent />} />
       </Routes>
+      <Footer/>
     </ThemeProvider>
   );
 }

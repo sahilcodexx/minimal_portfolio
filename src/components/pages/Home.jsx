@@ -7,6 +7,7 @@ import Featured from "../landing/Featured";
 import Blog from "@/blog/Blog";
 import ExperienceCard from "@/Experience/ExperienceCard";
 import Spotify from "../landing/Spotify";
+import CTA from "../landing/CTA";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         <AboutMe />
         <Featured />
         <Blog />
-        <Spotify/> 
+        <CTA/>
       </div>
     </Container>
   );
