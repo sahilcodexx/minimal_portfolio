@@ -49,7 +49,7 @@ const Featured = () => {
           </p>
           {/* <h3>Total: 1,916 contributions</h3> */}
         </div>
-        <div className="bg-background/50 github-card-shadow relative flex items-center justify-center rounded-lg border border-black/10 p-2 px-5 py-2 backdrop-blur-sm sm:p-4 md:p-6 dark:border-white/10">
+        <div className="inset-shadow bg-background/50 github-card-shadow relative flex items-center justify-center rounded-lg border border-black/10 p-2 px-5 py-2 backdrop-blur-sm sm:p-4 md:p-6 dark:border-white/10">
           <GitHubCalendar
             username="sahil-coder-2070"
             blockSize={7}

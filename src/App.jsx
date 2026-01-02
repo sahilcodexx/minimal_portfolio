@@ -8,6 +8,8 @@ import Work from "./components/pages/Work";
 import BlogContent from "./blog/BlogContent";
 import Projects from "./components/pages/Projects";
 import Footer from "./components/common/Footer";
+import { Quote } from "./components/common/Quote";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="projects/:slug" element={<ProjectContent />} />
         <Route path="blogs/:slug" element={<BlogContent />} />
       </Routes>
+      <Quote/>
       <Footer/>
     </ThemeProvider>
   );

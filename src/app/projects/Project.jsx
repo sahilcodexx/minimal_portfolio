@@ -9,8 +9,10 @@ const Project = () => {
     <Container className={`mt-20`}>
       <SectionHeading subHeading={"Featured"} heading={"Projects"} />
       <ProjectCard />
-      <div className="flex items-center w-full justify-center mt-8">
-        <Button variant="outline">Show all Projects</Button>
+      <div className="mt-8 flex w-full items-center justify-center">
+        <a href="/projects">
+          <Button variant="outline">Show all Projects</Button>
+        </a>
       </div>
     </Container>
   );

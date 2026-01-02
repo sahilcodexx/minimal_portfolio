@@ -10,7 +10,9 @@ const Blog = () => {
       <SectionHeading subHeading={"Featured"} heading={"Blogs"} />
       <BlogCard />
       <div className="mt-8 flex w-full items-center justify-center">
-        <Button variant="outline">Show all Blogs</Button>
+        <a href="/blogs">
+          <Button  variant="outline">Show all Blogs</Button>
+        </a>
       </div>
     </Container>
   );
