@@ -3,10 +3,19 @@ import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import ProjectCard from "@/app/projects/ProjectCard";
+import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
   return (
     <Container className={"py-16"}>
+      <Helmet>
+        <title>Projects | My Work</title>
+        <meta
+          name="description"
+          content="Explore my React and frontend development projects featuring clean UI, performance-focused design, and real-world use cases."
+        />
+      </Helmet>
+
       <div className="space-y-8">
         <div className="space-y-4 text-center">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">

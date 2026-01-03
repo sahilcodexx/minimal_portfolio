@@ -2,10 +2,19 @@ import React from "react";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
 import ExperienceContent from "@/Experience/ExperienceContent";
+import { Helmet } from "react-helmet-async";
 
 const Work = () => {
   return (
     <Container className={"py-16"}>
+      <Helmet>
+        <title>Work Experience - Professional Journey</title>
+        <meta
+          name="description"
+          content="A detailed overview of my professional journey, work experience, and contributions to real-world projects using React and modern frontend technologies."
+        />
+      </Helmet>
+
       <div className="space-y-8">
         {/* Header */}
         <div className="space-y-4 text-center">
