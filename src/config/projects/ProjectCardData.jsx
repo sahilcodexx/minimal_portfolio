@@ -51,14 +51,14 @@ export const ProjectCardData = [
     technologies: [
       {
         name: "JavaScript",
-        icon: <JavaScript />, // or import the icon component directly
+        icon: <JavaScript />, 
       },
       {
         name: "React",
         icon: <ReactJs />,
       },
     ],
-    isWorking: true,
+    isWorking: false,
     details: true,
     projectDetailsPageSlug: "/projects/fest-x",
   },

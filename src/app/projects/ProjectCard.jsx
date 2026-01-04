@@ -17,12 +17,12 @@ import Github from "@/svgs/Github";
 import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
-const ProjectCard = () => {
+const ProjectCard = ({ data }) => {
   return (
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
     >
-      {ProjectCardData.map((items) => {
+      {data.map((items) => {
         return (
           <Motion.div
             initial={{ y: 40, opacity: 0 }}

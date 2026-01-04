@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import ProjectCard from "@/app/projects/ProjectCard";
 import { Helmet } from "react-helmet-async";
+import { Badge } from "../ui/badge";
 
 const Projects = () => {
+  const [isSelected, setIsSelected] = useState(false);
+  const filteredProjects = isSelected
+    ? ProjectCardData.filter((item) => item.isWorking)
+    : ProjectCardData;
   return (
     <Container className={"py-16"}>
       <Helmet>
@@ -27,15 +32,39 @@ const Projects = () => {
         </div>
       </div>
       <Separator />
+      <Badge
+        onClick={() => setIsSelected((prev) => !prev)}
+        className={
+          "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
+        }
+      >
+        Working ({ProjectCardData.filter((item) => item.isWorking).length})
+      </Badge>
+
       <div className="flex items-center gap-2">
         <h3 className="text-2xl font-bold">Latest Posts</h3>
         <span className="text-sm">({ProjectCardData.length} posts)</span>
       </div>
       <div>
-        <ProjectCard />
+        <ProjectCard data={filteredProjects} />
       </div>
     </Container>
   );
 };
 
 export default Projects;
+
+{
+  /* <button
+  key={tag}
+  onClick={() => handleTagClick(tag)}
+  className="transition-colors"
+>
+  <Badge
+    variant={isSelected ? "default" : "outline"}
+    className="hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
+  >
+    {tag}
+  </Badge>
+</button>; */
+}
