@@ -12,13 +12,10 @@ import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
-    <Container className={`min-h-[250vh]`}>
+    <Container className={`min-h-screen`}>
       <Helmet>
         <title>Sahil - Full Stack Developer</title>
-        <meta
-          name="description"
-          content="Aman ka personal portfolio website. React developer."
-        />
+        <meta name="description" content="." />
       </Helmet>
       <div>
         <Hero />

@@ -24,8 +24,8 @@ function App() {
         <Route path="projects/:slug" element={<ProjectContent />} />
         <Route path="blogs/:slug" element={<BlogContent />} />
       </Routes>
-      <Quote/>
-      <Footer/>
+      <Quote />
+      <Footer />
     </ThemeProvider>
   );
 }

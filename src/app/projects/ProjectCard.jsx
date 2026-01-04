@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/tooltip";
 import Website from "@/svgs/Website";
 import Github from "@/svgs/Github";
-import JavaScript from "@/technologies/JavaScript";
 import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
