@@ -63,6 +63,7 @@ const BlogContent = () => {
 
   return (
     <Container>
+    <button>back </button>
       <article className="mx-auto max-w-4xl">
         {/* ===== BLOG HEADER ===== */}
         <header className="mb-10 space-y-6">
