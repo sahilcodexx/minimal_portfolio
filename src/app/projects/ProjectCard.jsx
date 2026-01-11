@@ -17,7 +17,7 @@ import Github from "@/svgs/Github";
 import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data = ProjectCardData }) => {
   return (
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
@@ -25,6 +25,7 @@ const ProjectCard = ({ data }) => {
       {data.map((items) => {
         return (
           <Motion.div
+            key={items.id ?? items.title}
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
@@ -35,10 +36,7 @@ const ProjectCard = ({ data }) => {
             viewport={{ once: true }}
             className="flex flex-col gap-4"
           >
-            <Card
-              key={items.title}
-              className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800"
-            >
+            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800">
               <CardHeader className="p-0">
                 <img
                   width={1920}

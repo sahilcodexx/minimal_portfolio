@@ -6,7 +6,7 @@ export const ProjectCardData = [
     id: 1,
     title: "ChefyAi",
     img: {
-      src: "https://ramx.in/_next/image?url=%2Fproject%2Fnotesbuddy.png&w=1920&q=75",
+      src: "./projects/project1.webp",
       alt: "ChefyAi project image",
       width: 1920,
       height: 1080,
@@ -23,20 +23,20 @@ export const ProjectCardData = [
         name: "JavaScript",
         icon: <JavaScript />, 
       },
-      { 
+      {
         name: "React",
         icon: <ReactJs />,
       },
     ],
-    isWorking: true,
+    isWorking: false,
     details: true,
-    projectDetailsPageSlug: "/projects/that-startup",
+    projectDetailsPageSlug: "/projects/fest-x",
   },
   {
-    id: 1,
+    id: 2,
     title: "ChefyAi",
     img: {
-      src: "https://ramx.in/_next/image?url=%2Fproject%2Fnotesbuddy.png&w=1920&q=75",
+      src: "./projects/project2.webp",
       alt: "ChefyAi project image",
       width: 1920,
       height: 1080,
