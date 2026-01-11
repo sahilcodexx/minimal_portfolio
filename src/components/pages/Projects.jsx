@@ -7,10 +7,13 @@ import { Helmet } from "react-helmet-async";
 import { Badge } from "../ui/badge";
 
 const Projects = () => {
-  const [isSelected, setIsSelected] = useState(false);
-  const filteredProjects = isSelected
-    ? ProjectCardData.filter((item) => item.isWorking)
-    : ProjectCardData;
+  const [isSelected, setIsSelected] = useState(null);
+
+  const filteredProjects =
+    isSelected === null
+      ? ProjectCardData
+      : ProjectCardData.filter((item) => item.isWorking === isSelected);
+
   return (
     <Container className={"py-16"}>
       <Helmet>
@@ -32,21 +35,39 @@ const Projects = () => {
         </div>
       </div>
       <Separator />
-      <Badge
-        onClick={() => setIsSelected((prev) => !prev)}
-        className={
-          "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
-        }
-      >
-        Working ({ProjectCardData.filter((item) => item.isWorking).length})
-      </Badge>
+      <div className="my-2 flex gap-5">
+        <Badge
+          onClick={() => setIsSelected(null)}
+          className={
+            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
+          }
+        >
+          All ({ProjectCardData.length})
+        </Badge>
+        <Badge
+          onClick={() => setIsSelected(true)}
+          className={
+            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
+          }
+        >
+          Working ({ProjectCardData.filter((item) => item.isWorking).length})
+        </Badge>
+        <Badge
+          onClick={() => setIsSelected(false)}
+          className={
+            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
+          }
+        >
+          Building ({ProjectCardData.filter((item) => item.isWorking).length})
+        </Badge>
+      </div>
 
       <div className="flex items-center gap-2">
         <h3 className="text-2xl font-bold">Latest Posts</h3>
         <span className="text-sm">({ProjectCardData.length} posts)</span>
       </div>
       <div>
-        <ProjectCard data={filteredProjects} />
+        <ProjectCard completed={filteredProjects} />
       </div>
     </Container>
   );

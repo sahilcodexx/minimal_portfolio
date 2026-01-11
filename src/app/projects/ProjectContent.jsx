@@ -51,8 +51,10 @@ const ProjectContent = () => {
 
   if (error) {
     return (
-      <Container>
-        <p>404 | Blog not found</p>
+      <Container
+        className={"flex min-h-screen items-start justify-center py-20"}
+      >
+        <p className="text-lg font-medium">404 | Blog not found</p>
       </Container>
     );
   }
