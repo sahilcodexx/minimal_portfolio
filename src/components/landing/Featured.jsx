@@ -17,7 +17,7 @@ const Featured = () => {
     body: JSON.stringify({
       query: `
       query {
-  user(login: "sahil-coder-2070") {
+  user(login: "sahilcodexx") {
     contributionsCollection {
       contributionCalendar {
         totalContributions
@@ -60,7 +60,7 @@ const Featured = () => {
           className="inset-shadow bg-background/50 github-card-shadow relative flex items-center justify-center rounded-lg border border-black/10 p-2 px-5 py-2 backdrop-blur-sm sm:p-4 md:p-6 dark:border-white/10"
         >
           <GitHubCalendar
-            username="sahil-coder-2070"
+            username="sahilcodexx"
             blockSize={7}
             blockMargin={5}
             colorScheme={currentTheme === "dark" ? "dark" : "light"}

@@ -1,14 +1,14 @@
 ---
 title: "Movie Finder - React Movie App"
 description: "A React-based web app to search, browse, and discover movies using TMDB API, built with Vite and Tailwind CSS."
-image: "https://raw.githubusercontent.com/sahil-coder-2070/movie-app/refs/heads/main/public/stage-1768141462162.webp"
+image: "https://raw.githubusercontent.com/sahilcodexx/movie-app/refs/heads/main/public/stage-1768141462162.webp"
 technologies:
   - React
   - Vite
   - Tailwind CSS
   - TMDB API
   - JavaScript
-github: "https://github.com/sahil-coder-2070/movie-app"
+github: "https://github.com/sahilcodexx/movie-app"
 live: "https://find-moviename.vercel.app/"
 timeline: "3 Days"
 role: "Frontend Developer"

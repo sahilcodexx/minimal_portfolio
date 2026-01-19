@@ -1,7 +1,7 @@
 ---
 title: "ChefyAI - AI-Powered Recipe Generator"
 description: "An AI-driven web app that instantly generates unique recipes using modern frontend tech and Puter.js database."
-image: "https://raw.githubusercontent.com/sahil-coder-2070/ai-recipe/refs/heads/main/public/stage-1768141052622.webp"
+image: "https://raw.githubusercontent.com/sahilcodexx/ai-recipe/refs/heads/main/public/stage-1768141052622.webp"
 technologies:
   - React
   - Tailwind CSS
@@ -9,7 +9,7 @@ technologies:
   - Lucide Icons
   - Puter.js
   - Vite
-github: "https://github.com/sahil-coder-2070/ai-recipe"
+github: "https://github.com/sahilcodexx/ai-recipe"
 live: "https://chefyai.vercel.app/"
 timeline: "1 months"
 role: "Frontend Developer"

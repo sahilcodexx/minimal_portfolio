@@ -59,7 +59,7 @@ const socialLinks = [
   },
   {
     name: "Github",
-    href: "https://github.com/sahil-coder-2070",
+    href: "https://github.com/sahilcodexx",
     icon: <Github />,
   },
   {
