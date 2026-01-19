@@ -9,6 +9,9 @@ import Container from "@/components/layouts/Container";
 import { Badge } from "@/components/ui/badge";
 import { BlogComponents } from "./BlogComponent";
 import { useParams } from "react-router-dom";
+import { CalendarRange } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { BackButton } from "@/components/common/BackButton";
 window.Buffer = Buffer;
 
 const BlogContent = () => {
@@ -59,36 +62,45 @@ const BlogContent = () => {
       </Container>
     );
   }
-  const metatags = meta.tags;
 
   return (
     <Container>
-    <button>back </button>
+      <BackButton text={"Back to Blog"} />
       <article className="mx-auto max-w-4xl">
         {/* ===== BLOG HEADER ===== */}
-        <header className="mb-10 space-y-6">
-          <div className="flex flex-wrap gap-2">
-            {metatags.map((tag) => (
-              <Badge key={tag} variant="default">
-                {tag}
-              </Badge>
-            ))}
+        <header className="mb-8 space-y-6">
+          <div className="relative aspect-video overflow-hidden rounded-lg">
+            <img
+              src={meta.image}
+              alt={meta.title}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
-          <h1 className="mb-6 text-5xl font-bold">{meta.title}</h1>
 
-          {meta.description && (
-            <p className="text-muted-foreground mb-4">{meta.description}</p>
-          )}
+          <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
+              {meta.tags.map((tag) => (
+                <Badge key={tag} variant="default">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
 
-          <div className="flex flex-wrap gap-3 text-sm">
-            {meta.date && <span>{meta.date}</span>}
+            <h1 className="text-4xl leading-tight font-bold lg:text-5xl">
+              {meta.title}
+            </h1>
 
-            {meta.tags?.map((tag) => (
-              <span key={tag} className="text-blue-400">
-                #{tag}
-              </span>
-            ))}
+            <p className="text-muted-foreground text-xl">{meta.description}</p>
+
+            <div className="text-muted-foreground flex items-center gap-2 text-sm">
+              <CalendarRange className="size-6" />
+              <time dateTime={meta.date}>{meta.date}</time>
+            </div>
           </div>
+
+          <Separator />
         </header>
 
         {/* ===== BLOG CONTENT (YOUR UI HERE) ===== */}

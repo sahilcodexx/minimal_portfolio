@@ -7,7 +7,7 @@ import { motion as Motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <Container className={`flex flex-col items-start justify-center py-18`}>
+    <Container className={`flex flex-col items-start justify-center py-18 wf;`}>
       <Motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -43,6 +43,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-

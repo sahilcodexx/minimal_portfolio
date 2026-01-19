@@ -10,23 +10,31 @@ import Projects from "./components/pages/Projects";
 import Footer from "./components/common/Footer";
 import { Quote } from "./components/common/Quote";
 import Contact from "./components/pages/Contact";
+import ResumePage from "./components/layouts/ResumePage";
+import Container from "./components/layouts/Container";
+import Layout from "./components/common/Layout";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="projects/:slug" element={<ProjectContent />} />
-        <Route path="blogs/:slug" element={<BlogContent />} />
-      </Routes>
-      <Quote />
-      <Footer />
-    </ThemeProvider>
+    <Container>
+      <Layout>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="resume" element={<ResumePage />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="projects/:slug" element={<ProjectContent />} />
+            <Route path="blogs/:slug" element={<BlogContent />} />
+          </Routes>
+          <Quote />
+          <Footer />
+        </ThemeProvider>
+      </Layout>
+    </Container>
   );
 }
 

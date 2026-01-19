@@ -4,6 +4,7 @@ import SendIcon from "@/svgs/SendIcon";
 import Cv from "@/svgs/Cv";
 import Container from "../layouts/Container";
 import { motion as Motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const ResumeButton = () => {
   return (
@@ -15,9 +16,11 @@ const ResumeButton = () => {
         viewport={{ once: true }}
         className="flex items-center gap-3"
       >
-        <Button variant="outline">
-          <Cv /> Resume/ CV
-        </Button>
+        <Link to={"resume"}>
+          <Button variant="outline">
+            <Cv /> Resume/ CV
+          </Button>
+        </Link>
         <Button>
           <SendIcon /> Get In Touch
         </Button>

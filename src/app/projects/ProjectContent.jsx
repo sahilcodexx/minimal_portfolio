@@ -14,6 +14,7 @@ import Website from "@/svgs/Website";
 import Github from "@/svgs/Github";
 import { Separator } from "@/components/ui/separator";
 import { ProjectNavigation } from "@/components/common/ProjectNavigation";
+import { BackButton } from "@/components/common/BackButton";
 
 const ProjectContent = () => {
   const { slug } = useParams();
@@ -66,6 +67,7 @@ const ProjectContent = () => {
 
   return (
     <Container>
+      <BackButton text={'Back to Project'} />
       <header className="mb-8 space-y-6">
         <div className="relative aspect-video overflow-hidden rounded-lg">
           <img
