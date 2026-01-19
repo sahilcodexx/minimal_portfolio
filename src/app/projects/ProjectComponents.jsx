@@ -144,7 +144,7 @@ const Learnings = ({ learnings }) => (
 
 export const ProjectComponents = {
   img: ({ src, alt, ...props }) => (
-    <Image
+    <img
       src={src}
       alt={alt}
       width={800}

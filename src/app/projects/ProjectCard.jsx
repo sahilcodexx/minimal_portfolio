@@ -29,11 +29,12 @@ const ProjectCard = ({ completed = ProjectCardData }) => {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               ease: "easeInOut",
               delay: 0.2 * items.id,
             }}
             viewport={{ once: true }}
+            layout
             className="flex flex-col gap-4"
           >
             <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm transition-all dark:border-gray-800">

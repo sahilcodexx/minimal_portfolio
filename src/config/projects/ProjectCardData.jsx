@@ -8,7 +8,7 @@ export const ProjectCardData = [
     id: 1,
     title: "ChefyAi",
     img: {
-      src: "./projects/project1.webp",
+      src: "/projects/project1.webp",
       alt: "ChefyAi project image",
       width: 1920,
       height: 1080,

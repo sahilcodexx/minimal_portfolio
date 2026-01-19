@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import matter from "gray-matter";
 
 import ReactMarkdown from "react-markdown";
@@ -8,7 +8,12 @@ import rehypeHighlight from "rehype-highlight";
 
 import Container from "@/components/layouts/Container";
 import { ProjectComponents } from "./ProjectComponents";
-import NestJs from "@/technologies/NextJS";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Website from "@/svgs/Website";
+import Github from "@/svgs/Github";
+import { Separator } from "@/components/ui/separator";
+import { ProjectNavigation } from "@/components/common/ProjectNavigation";
 
 const ProjectContent = () => {
   const { slug } = useParams();
@@ -61,10 +66,164 @@ const ProjectContent = () => {
 
   return (
     <Container>
-      <h1>
-        {meta.title}
-        <NestJs />
-      </h1>
+      <header className="mb-8 space-y-6">
+        <div className="relative aspect-video overflow-hidden rounded-lg">
+          <img
+            src={meta.image}
+            alt={meta.title}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        <div className="space-y-4">
+          {/* Project Status and Technologies */}
+          <div className="flex flex-wrap items-center gap-3">
+            <Badge variant={meta.statusVariant} className="text-sm">
+              {meta.status.charAt(0).toUpperCase() + meta.status.slice(1)}
+            </Badge>
+            {meta.technologies.slice(0, 3).map((tech) => (
+              <Badge key={tech} variant="outline" className="text-xs">
+                {tech}
+              </Badge>
+            ))}
+            {meta.technologies.length > 3 && (
+              <Badge variant="outline" className="text-xs">
+                +{meta.technologies.length - 3} more
+              </Badge>
+            )}
+          </div>
+
+          <h1 className="text-4xl leading-tight font-bold lg:text-5xl">
+            {meta.title}
+          </h1>
+
+          <p className="text-muted-foreground text-xl">{meta.description}</p>
+
+          {/* Project Meta Information */}
+          <div className="bg-muted/20 grid gap-4 rounded-lg border p-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h5 className="text-muted-foreground text-sm font-semibold">
+                Timeline
+              </h5>
+              <p className="text-sm">{meta.timeline}</p>
+            </div>
+            <div>
+              <h5 className="text-muted-foreground text-sm font-semibold">
+                Role
+              </h5>
+              <p className="text-sm">{meta.role}</p>
+            </div>
+            {meta.team && (
+              <div>
+                <h5 className="text-muted-foreground text-sm font-semibold">
+                  Team
+                </h5>
+                <p className="text-sm">{meta.team}</p>
+              </div>
+            )}
+            <div>
+              <h5 className="text-muted-foreground text-sm font-semibold">
+                Status
+              </h5>
+              <Badge variant={meta.statusVariant} className="text-xs">
+                {meta.status.charAt(0).toUpperCase() + meta.status.slice(1)}
+              </Badge>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-3">
+            {meta.live && (
+              <Button asChild>
+                <Link
+                  href={meta.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Website className="size-4" />
+                  Live Demo
+                </Link>
+              </Button>
+            )}
+            {meta.github && (
+              <Button variant="outline" asChild>
+                <Link
+                  href={meta.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Github className="size-4" />
+                  Source Code
+                </Link>
+              </Button>
+            )}
+          </div>
+        </div>
+
+        <Separator />
+      </header>
+      <div className="mb-8">
+        <div className="bg-muted/20 rounded-lg border p-4">
+          <h3 className="mb-3 text-lg font-semibold">Technology Stack</h3>
+          <div className="flex flex-wrap gap-2">
+            {meta.technologies.map((tech) => (
+              <div
+                key={tech}
+                className="bg-muted/50 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium"
+              >
+                <span>{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Challenges and Learnings */}
+      {(meta.challenges?.length || meta.learnings?.length) && (
+        <div className="mb-8 grid gap-6 md:grid-cols-2">
+          {meta.challenges && meta.challenges.length > 0 && (
+            <div className="rounded-lg border border-yellow-200 bg-yellow-50 p-4 dark:border-yellow-800 dark:bg-yellow-950/20">
+              <h3 className="mb-3 text-lg font-semibold text-yellow-800 dark:text-yellow-200">
+                Key Challenges
+              </h3>
+              <ul className="space-y-2">
+                {meta.challenges.map((challenge, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-sm text-yellow-700 dark:text-yellow-300"
+                  >
+                    <span className="mt-1 block size-1.5 rounded-full bg-yellow-500 dark:bg-yellow-400" />
+                    {challenge}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {meta.learnings && meta.learnings.length > 0 && (
+            <div className="rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-950/20">
+              <h3 className="mb-3 text-lg font-semibold text-green-800 dark:text-green-200">
+                Key Learnings
+              </h3>
+              <ul className="space-y-2">
+                {meta.learnings.map((learning, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-sm text-green-700 dark:text-green-300"
+                  >
+                    <span className="mt-1 block size-1.5 rounded-full bg-green-500 dark:bg-green-400" />
+                    {learning}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
@@ -73,6 +232,7 @@ const ProjectContent = () => {
       >
         {content}
       </ReactMarkdown>
+      <ProjectNavigation slug={slug} />
     </Container>
   );
 };
