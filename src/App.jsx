@@ -13,6 +13,7 @@ import Contact from "./components/pages/Contact";
 import ResumePage from "./components/layouts/ResumePage";
 import Container from "./components/layouts/Container";
 import Layout from "./components/common/Layout";
+import GearsPage from "./app/gear/Gear";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="projects/:slug" element={<ProjectContent />} />
             <Route path="blogs/:slug" element={<BlogContent />} />
+            <Route path="gear" element={<GearsPage />} />
           </Routes>
           <Quote />
           <Footer />

@@ -9,6 +9,7 @@ import ExperienceCard from "@/Experience/ExperienceCard";
 import Spotify from "../landing/Spotify";
 import CTA from "../landing/CTA";
 import { Helmet } from "react-helmet-async";
+import Setup from "../landing/Setup";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
         <Featured />
         <Blog />
         <CTA />
+        <Setup />
       </div>
     </Container>
   );

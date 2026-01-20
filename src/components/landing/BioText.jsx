@@ -16,7 +16,7 @@ const BioText = () => {
       className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-base whitespace-pre-wrap text-neutral-500 md:text-lg"
     >
       <span className="whitespace-pre-wrap">
-        I build interactive web apps using
+        I develop interactive web apps using
       </span>
       <SkillTag skill={Skills[4]} />
       <span className="whitespace-pre-wrap">, </span>
@@ -25,17 +25,17 @@ const BioText = () => {
       <SkillTag skill={Skills[1]} />
       <span className="whitespace-pre-wrap">, </span>
       <SkillTag skill={Skills[2]} />
-      <span className="whitespace-pre-wrap">and </span>
+      <span className="whitespace-pre-wrap"> and </span>
       <SkillTag skill={Skills[3]} />
-      <span className="whitespace-pre-wrap">. </span>
-      <span className="whitespace-pre-wrap">With a focus on</span>
-      <b className="text-primary dark:text-primary whitespace-pre-wrap">UI</b>
-      <span className="whitespace-pre-wrap"> design. Enthusiastic about </span>
+      <span className="whitespace-pre-wrap">With a focus on</span>{" "}
+      <b className="text-primary dark:text-primary whitespace-pre-wrap">UI</b>{" "}
+      <span className="whitespace-pre-wrap"> design. Enthusiastic about </span>{" "}
       <b className="text-primary dark:text-primary whitespace-pre-wrap">
-        Motion
-      </b>
+        Motion{" "}
+      </b>{" "}
       <span className="whitespace-pre-wrap">
-        , driven by a keen eye for design.
+        {" "}
+        , driven by a keen eye for design.{" "}
       </span>
     </Motion.div>
   );

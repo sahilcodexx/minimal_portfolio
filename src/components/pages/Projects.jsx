@@ -15,7 +15,7 @@ const Projects = () => {
       : ProjectCardData.filter((item) => item.isWorking === isSelected);
 
   return (
-    <Container className={"py-16"}>
+    <Container className="py-16">
       <Helmet>
         <title>Projects | My Work</title>
         <meta
@@ -34,31 +34,44 @@ const Projects = () => {
           </p>
         </div>
       </div>
+
       <Separator />
+
       <div className="my-2 flex gap-5">
         <Badge
+          variant={isSelected === null ? "secondary" : "outline"}
           onClick={() => setIsSelected(null)}
-          className={
-            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
-          }
+          className={`cursor-pointer capitalize ${
+            isSelected === null
+              ? "bg-foreground text-background"
+              : "hover:bg-accent hover:text-accent-foreground shadow-accent inset-shadow dark:inset-shadow-neutral-700"
+          }`}
         >
           All ({ProjectCardData.length})
         </Badge>
+
         <Badge
+          variant={isSelected === true ? "default" : "outline"}
           onClick={() => setIsSelected(true)}
-          className={
-            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
-          }
+          className={`cursor-pointer capitalize ${
+            isSelected === true
+              ? "bg-foreground text-background"
+              : "hover:bg-accent hover:text-accent-foreground shadow-accent inset-shadow dark:inset-shadow-neutral-700"
+          }`}
         >
           Working ({ProjectCardData.filter((item) => item.isWorking).length})
         </Badge>
+
         <Badge
+          variant={isSelected === false ? "default" : "outline"}
           onClick={() => setIsSelected(false)}
-          className={
-            "hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
-          }
+          className={`cursor-pointer capitalize ${
+            isSelected === false
+              ? "bg-foreground text-background"
+              : "hover:bg-accent hover:text-accent-foreground shadow-accent inset-shadow dark:inset-shadow-neutral-700"
+          }`}
         >
-          Building ({ProjectCardData.filter((item) => item.isWorking).length})
+          Building ({ProjectCardData.filter((item) => !item.isWorking).length})
         </Badge>
       </div>
 
@@ -66,26 +79,19 @@ const Projects = () => {
         <h3 className="text-2xl font-bold">Latest Posts</h3>
         <span className="text-sm">({ProjectCardData.length} posts)</span>
       </div>
-      <div>
-        <ProjectCard completed={filteredProjects} />
-      </div>
+
+      {ProjectCardData.filter(
+        (item) => item.isWorking === false && item.name.length === 0,
+      ) // length check optional
+        .map((item) => (
+          <div key={item.id} className="">
+            dsad
+          </div>
+        ))}
+
+      <ProjectCard completed={filteredProjects} />
     </Container>
   );
 };
 
 export default Projects;
-
-{
-  /* <button
-  key={tag}
-  onClick={() => handleTagClick(tag)}
-  className="transition-colors"
->
-  <Badge
-    variant={isSelected ? "default" : "outline"}
-    className="hover:bg-accent hover:text-accent-foreground tag-inner-shadow cursor-pointer capitalize"
-  >
-    {tag}
-  </Badge>
-</button>; */
-}

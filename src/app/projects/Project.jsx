@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Project = () => {
   return (
-    <Container className={`mt-20`}>
+    <Container className={`mt-25`}>
       <SectionHeading subHeading={"Featured"} heading={"Projects"} />
       <ProjectCard />
       <div className="mt-8 flex w-full items-center justify-center">

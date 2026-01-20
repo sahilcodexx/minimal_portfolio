@@ -38,9 +38,9 @@ const BlogCard = () => {
           >
             <Card
               key={items.id}
-              className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800"
+              className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm transition-all dark:border-gray-800"
             >
-              <CardHeader className="p-0">
+              <CardHeader className="max-w-2xl p-0">
                 <img
                   width={1920}
                   height={1080}

@@ -40,7 +40,7 @@ const Featured = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <Container className={`mt-20`}>
+    <Container className={`mt-25`}>
       <SectionHeading subHeading={"Featured"} heading={"GitHub Activity"} />
       <div className="space-y-6">
         <div className="flex w-full justify-between">
