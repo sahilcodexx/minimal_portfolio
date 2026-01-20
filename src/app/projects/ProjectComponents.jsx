@@ -1,8 +1,8 @@
 import Bun from "@/technologies/Bun";
 import JavaScript from "@/technologies/JavaScript";
 import MongoDB from "@/technologies/MongoDB";
-import NextJs from "@/technologies/NextJS";
-import NodeJs from "@/technologies/NodeJS";
+import NextJS from "@/technologies/NextJS";
+import NodeJS from "@/technologies/NodeJS";
 import PostgreSQL from "@/technologies/PostgreSQL";
 import Prisma from "@/technologies/Prisma";
 import ReactIcon from "@/technologies/ReactIcon";
@@ -11,17 +11,17 @@ import { Badge } from "@/components/ui/badge";
 
 // Technology mapping
 const TechnologyComponents = {
-  "Next.js": NextJs,
-  nextjs: NextJs,
+  "Next.js": NextJS,
+  nextjs: NextJS,
   React: ReactIcon,
   react: ReactIcon,
   TypeScript: TypeScript,
   typescript: TypeScript,
   JavaScript: JavaScript,
   javascript: JavaScript,
-  "Node.js": NodeJs,
-  nodejs: NodeJs,
-  node: NodeJs,
+  "Node.js": NodeJS,
+  nodejs: NodeJS,
+  node: NodeJS,
   MongoDB: MongoDB,
   mongodb: MongoDB,
   PostgreSQL: PostgreSQL,

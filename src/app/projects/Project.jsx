@@ -1,6 +1,7 @@
 import SectionHeading from "@/components/common/SectionHeading";
 import Container from "@/components/layouts/Container";
 import React from "react";
+import { Link } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 import { Button } from "@/components/ui/button";
 
@@ -10,9 +11,9 @@ const Project = () => {
       <SectionHeading subHeading={"Featured"} heading={"Projects"} />
       <ProjectCard />
       <div className="mt-8 flex w-full items-center justify-center">
-        <a href="/projects">
+        <Link to="/projects">
           <Button variant="outline">Show all Projects</Button>
-        </a>
+        </Link>
       </div>
     </Container>
   );
