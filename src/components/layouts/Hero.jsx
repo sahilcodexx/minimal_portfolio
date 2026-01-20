@@ -7,7 +7,7 @@ import { motion as Motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <Container className={` flex flex-col items-start justify-center py-18`}>
+    <Container className={`flex flex-col items-start justify-center py-18`}>
       <Motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -31,7 +31,8 @@ const Hero = () => {
         <h2 className="text-4xl font-semibold text-neutral-700 dark:text-neutral-50">
           Hi, I'm Sahil —
           <span className="font-bold text-neutral-500/70 dark:text-neutral-400">
-            {" "}Desgin Engineer.
+            {" "}
+            Desgin Engineer.
           </span>
         </h2>
       </Motion.div>
