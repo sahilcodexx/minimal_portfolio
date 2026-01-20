@@ -22,8 +22,8 @@ const AboutMe = () => {
 
         <div className="mt-3 flex flex-col justify-between">
           <div>
-            <h3 class="text-2xl font-bold">Sahil Singh</h3>
-            <h3 class="text-md text-muted-foreground mt-4">
+            <h3 className="text-2xl font-bold">Sahil Singh</h3>
+            <h3 className="text-md text-muted-foreground mt-4">
               I'm a Full Stack web developer and Open Source Contributor, I love
               building products to solve real-world problems. I'm specialized in
               building MVP's.

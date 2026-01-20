@@ -16,9 +16,9 @@ import Layout from "./components/common/Layout";
 
 function App() {
   return (
-    <Container>
-      <Layout>
-        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Container>
+        <Layout>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -32,9 +32,9 @@ function App() {
           </Routes>
           <Quote />
           <Footer />
-        </ThemeProvider>
-      </Layout>
-    </Container>
+        </Layout>
+      </Container>
+    </ThemeProvider>
   );
 }
 

@@ -25,6 +25,7 @@ const BlogCard = () => {
       {BlogCardData.map((items) => {
         return (
           <Motion.div
+            key={items.id}
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
@@ -98,7 +99,7 @@ const BlogCard = () => {
                     <div className="flex flex-wrap gap-2">
                       {items.technologies.map((tech) => {
                         return (
-                          <Tooltip>
+                          <Tooltip key={tech.name}>
                             <TooltipTrigger>
                               <div className="size-6 transition-all duration-300 hover:scale-120 hover:cursor-pointer">
                                 {tech.icon}

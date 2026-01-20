@@ -23,6 +23,7 @@ const ExperienceContent = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ once: true }}
             className="flex flex-col gap-4"
+            key={items.company}
           >
             <div className="mt-4 flex items-center gap-5">
               <div>
@@ -78,7 +79,7 @@ const ExperienceContent = () => {
                     </div>
                   </div>
                   <div>
-                    <p class="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {items.position}
                     </p>
                   </div>
