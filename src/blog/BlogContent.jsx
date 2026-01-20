@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import { CalendarRange } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { BackButton } from "@/components/common/BackButton";
+import { BlogNavigation } from "@/components/common/BlogNavigation";
 window.Buffer = Buffer;
 
 const BlogContent = () => {
@@ -112,6 +113,7 @@ const BlogContent = () => {
           {content}
         </ReactMarkdown>
       </article>
+      <BlogNavigation slug={slug} />
     </Container>
   );
 };

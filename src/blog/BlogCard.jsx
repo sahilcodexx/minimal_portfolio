@@ -8,9 +8,10 @@ import {
 } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, CalendarSearch } from "lucide-react";
-import { BlogCardData } from "@/config/blog/BlogCardData";
+
 import { motion as Motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
+import { BlogCardData } from "@/config/blog/BlogCardData";
 const BlogCard = () => {
   return (
     <Container
@@ -30,10 +31,10 @@ const BlogCard = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-4"
           >
-            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800">
+            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0  transition-all dark:border-gray-800 shadow-sm">
               <CardHeader className="p-0">
                 <div className="relative aspect-video overflow-hidden">
-                  <Link to={`/blog/${items.slug}`}>
+                  <Link to={`/blogs/${items.slug}`}>
                     <img
                       width={1920}
                       height={1080}
@@ -47,7 +48,7 @@ const BlogCard = () => {
 
               <CardContent>
                 <div className="space-y-3">
-                  <Link to={`/blog/${items.slug}`}>
+                  <Link to={`/blogs/${items.slug}`}>
                     <h3 className="group-hover:text-primary line-clamp-2 text-xl leading-tight font-semibold">
                       {items.title}
                     </h3>
@@ -86,7 +87,7 @@ const BlogCard = () => {
                       {items.formattedDate}
                     </time>
                     <Link
-                      to={`/blog/${items.slug}`}
+                      to={`/blogs/${items.slug}`}
                       className="text-secondary flex items-center justify-end gap-2 underline-offset-4 hover:underline"
                     >
                       Read More <ArrowRight className="size-4" />
