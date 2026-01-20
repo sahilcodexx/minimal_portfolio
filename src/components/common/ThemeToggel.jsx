@@ -18,7 +18,7 @@ const ThemeToggle = () => {
 
   const toggleTheme = useCallback(() => {
     playSound();
-    setTheme(isDark ? "light" : "dark"); 
+    setTheme(isDark ? "light" : "dark");
   }, [isDark, setTheme]);
 
   const handleKeyDown = useCallback(
@@ -51,8 +51,11 @@ const ThemeToggle = () => {
             {isDark ? <Moon size={18} /> : <Sun size={16} />}
           </Button>
         </TooltipTrigger>
-        <TooltipContent>
-          Toggle theme <Button variant="toggle">D</Button>
+        <TooltipContent className={"text-sm"}>
+          Toggle theme{" "}
+          <Button variant="toggle" size="icon-sm" className={'ml-1'}>
+            D
+          </Button>
         </TooltipContent>
       </Tooltip>
     </>

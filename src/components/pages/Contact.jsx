@@ -25,30 +25,22 @@ import Chat from "@/svgs/Chat";
 import { Textarea } from "../ui/textarea";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
+import { databases, ID } from "@/lib/appwrite";
 
+// Zod validation schema
 const contactFormSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
   phone: z
     .string()
-    .min(10, {
-      message: "Phone number must be at least 10 characters.",
-    })
+    .min(10, { message: "Phone number must be at least 10 characters." })
     .regex(/^[+]?[1-9][\d]{0,15}$/, {
       message: "Please enter a valid phone number.",
     }),
   message: z
     .string()
-    .min(10, {
-      message: "Message must be at least 10 characters.",
-    })
-    .max(1000, {
-      message: "Message must not exceed 1000 characters.",
-    }),
+    .min(10, { message: "Message must be at least 10 characters." })
+    .max(1000, { message: "Message must not exceed 1000 characters." }),
 });
 
 export default function Contact() {
@@ -68,34 +60,31 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await databases.createDocument(
+        import.meta.env.VITE_APPWRITE_DATABASE_ID,
+        import.meta.env.VITE_APPWRITE_TABLE_ID,
+        ID.unique(),
+        {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
         },
-        body: JSON.stringify(data),
-      });
+      );
 
-      const result = await response.json();
-
-      if (response.ok) {
-        toast.success("Message sent successfully!");
-        form.reset();
-      } else {
-        toast.error(
-          result.error || "Failed to send message. Please try again.",
-        );
-      }
+      toast.success("Message sent successfully!");
+      form.reset();
+      // console.log(res);
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Something went wrong. Please try again later.");
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <Container className={"py-16"}>
+    <Container className="py-16">
       <div className="space-y-8">
         <div className="space-y-4 text-center">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
@@ -106,7 +95,9 @@ export default function Contact() {
           </p>
         </div>
       </div>
+
       <Separator />
+
       <Card className="border-none bg-transparent shadow-none">
         <CardHeader>
           <CardTitle>Send me a message</CardTitle>

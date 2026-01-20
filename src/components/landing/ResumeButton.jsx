@@ -21,9 +21,11 @@ const ResumeButton = () => {
             <Cv /> Resume/ CV
           </Button>
         </Link>
-        <Button>
-          <SendIcon /> Get In Touch
-        </Button>
+        <Link to={"contact"}>
+          <Button>
+            <SendIcon /> Get In Touch
+          </Button>
+        </Link>
       </Motion.div>
     </Container>
   );
