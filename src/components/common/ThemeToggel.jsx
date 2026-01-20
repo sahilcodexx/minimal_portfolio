@@ -51,12 +51,7 @@ const ThemeToggle = () => {
             {isDark ? <Moon size={18} /> : <Sun size={16} />}
           </Button>
         </TooltipTrigger>
-        <TooltipContent className={"text-sm"}>
-          Toggle theme{" "}
-          <Button variant="toggle" size="icon-sm" className={'ml-1'}>
-            D
-          </Button>
-        </TooltipContent>
+        <TooltipContent className={"text-sm"}>Toggle theme (D)</TooltipContent>
       </Tooltip>
     </>
   );
