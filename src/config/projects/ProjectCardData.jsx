@@ -2,12 +2,52 @@ import ReactJs from "@/svgs/ReactJs";
 import FramerMotion from "@/technologies/FramerMotion";
 import Gsap from "@/technologies/Gsap";
 import JavaScript from "@/technologies/JavaScript";
+import NextJs from "@/technologies/NextJS";
 import TailwindCss from "@/technologies/TailwindCss";
+import TypeScript from "@/technologies/TypeScript";
 import Vite from "@/technologies/Vite";
 
 export const ProjectCardData = [
   {
     id: 1,
+    title: "Image Editor AI",
+    img: {
+      src: "/projects/image-editor-ai.webp",
+      alt: "Image Editor AI project image",
+      width: 1920,
+      height: 1080,
+    },
+    description:
+      "Image Editor AI is an open-source AI-powered image editing tool built with Next.js. It provides an interface to apply intelligent edits using modern AI models and image processing features, allowing users to manipulate and transform images efficiently.",
+    links: {
+      website: "https://github.com/sahilcodexx/Image-Editor-AI",
+      github: "https://github.com/sahilcodexx/Image-Editor-AI",
+      details: "/projects/imageeditorai",
+    },
+    technologies: [
+      {
+        name: "TypeScript",
+        icon: <TypeScript />,
+      },
+      {
+        name: "Next.js",
+        icon: <NextJs />,
+      },
+      {
+        name: "React",
+        icon: <ReactJs />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <TailwindCss />,
+      },
+    ],
+    isWorking: true,
+    details: true,
+    projectDetailsPageSlug: "/projects/imageeditorai",
+  },
+  {
+    id: 2,
     title: "ChefyAI",
     img: {
       src: "/projects/project1.webp",
@@ -46,7 +86,7 @@ export const ProjectCardData = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Nova Gaming",
     img: {
       src: "/projects/project3.webp",
@@ -84,7 +124,7 @@ export const ProjectCardData = [
     projectDetailsPageSlug: "/projects/nova",
   },
   {
-    id: 3,
+    id: 4,
     title: "Movie Finder",
     img: {
       src: "/projects/project2.webp",
