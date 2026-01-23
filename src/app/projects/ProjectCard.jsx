@@ -97,7 +97,7 @@ const ProjectCard = ({ completed = ProjectCardData }) => {
                     <div className="flex flex-wrap gap-2">
                       {items.technologies.map((tech) => {
                         return (
-                          <Tooltip>
+                          <Tooltip key={tech.name}>
                             <TooltipTrigger>
                               <div className="size-6 transition-all duration-300 hover:scale-120 hover:cursor-pointer">
                                 {tech.icon}
@@ -136,7 +136,7 @@ const ProjectCard = ({ completed = ProjectCardData }) => {
                     to={items.projectDetailsPageSlug}
                     className="text-secondary hover:text-primary flex items-center gap-2 text-sm underline-offset-4 transition-colors duration-200 ease-[ease] hover:underline"
                   >
-                    View Details <ArrowRight className="size-4 mt-0.5" />
+                    View Details <ArrowRight className="mt-0.5 size-4" />
                   </Link>
                 </CardFooter>
               )}

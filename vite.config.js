@@ -12,6 +12,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'lenis']
+    include: ['react', 'react-dom', 'lenis', 'lenis/react']
   }
 })

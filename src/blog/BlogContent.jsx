@@ -71,13 +71,7 @@ const BlogContent = () => {
         {/* ===== BLOG HEADER ===== */}
         <header className="mb-8 space-y-6">
           <div className="relative aspect-video overflow-hidden rounded-lg">
-            <img
-              src={meta.image}
-              alt={meta.title}
-              fill
-              className="object-cover"
-              priority
-            />
+            <img src={meta.image} alt={meta.title} className="object-cover" />
           </div>
 
           <div className="space-y-4">
