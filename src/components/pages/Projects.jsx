@@ -71,7 +71,8 @@ const Projects = () => {
               : "hover:bg-accent hover:text-accent-foreground shadow-accent inset-shadow dark:inset-shadow-neutral-700"
           }`}
         >
-          Building ({ProjectCardData.filter((item) => !item.isWorking).length})
+          Building (
+          {ProjectCardData?.filter((item) => item.isBulding).length ?? 0})
         </Badge>
       </div>
 
@@ -79,15 +80,6 @@ const Projects = () => {
         <h3 className="text-2xl font-bold">Latest Posts</h3>
         <span className="text-sm">({ProjectCardData.length} posts)</span>
       </div>
-
-      {ProjectCardData.filter(
-        (item) => item.isWorking === false && item.name.length === 0,
-      ) // length check optional
-        .map((item) => (
-          <div key={item.id} className="">
-            dsad
-          </div>
-        ))}
 
       <ProjectCard completed={filteredProjects} />
     </Container>
