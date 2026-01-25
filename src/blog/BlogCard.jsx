@@ -31,7 +31,7 @@ const BlogCard = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-4"
           >
-            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0  transition-all dark:border-gray-800 shadow-sm">
+            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0   dark:border-gray-800 shadow-sm">
               <CardHeader className="p-0">
                 <div className="relative aspect-video overflow-hidden">
                   <Link to={`/blogs/${items.slug}`}>

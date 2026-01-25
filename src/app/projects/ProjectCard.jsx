@@ -37,7 +37,7 @@ const ProjectCard = ({ completed = ProjectCardData }) => {
             layout
             className="flex flex-col gap-4"
           >
-            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm transition-all dark:border-gray-800">
+            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm dark:border-gray-800">
               <CardHeader className="p-0">
                 <img
                   width={1920}
