@@ -1,47 +1,23 @@
-import { useEffect } from "react"
-import Lenis from "lenis"
-import { Route, Routes } from "react-router-dom"
-import { ThemeProvider } from "./components/landing/theme-provider"
-import Home from "./components/pages/Home"
-import { Navbar } from "./components/common/Navbar"
-import Blogs from "./components/pages/Blogs"
-import ProjectContent from "./app/projects/ProjectContent"
-import Work from "./components/pages/Work"
-import BlogContent from "./blog/BlogContent"
-import Projects from "./components/pages/Projects"
-import Footer from "./components/common/Footer"
-import { Quote } from "./components/common/Quote"
-import Contact from "./components/pages/Contact"
-import ResumePage from "./components/layouts/ResumePage"
-import Container from "./components/layouts/Container"
-import Layout from "./components/common/Layout"
-import GearsPage from "./app/gear/Gear"
+import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "./components/landing/theme-provider";
+import Home from "./components/pages/Home";
+import { Navbar } from "./components/common/Navbar";
+import Blogs from "./components/pages/Blogs";
+import ProjectContent from "./app/projects/ProjectContent";
+import Work from "./components/pages/Work";
+import BlogContent from "./blog/BlogContent";
+import Projects from "./components/pages/Projects";
+import Footer from "./components/common/Footer";
+import { Quote } from "./components/common/Quote";
+import Contact from "./components/pages/Contact";
+import ResumePage from "./components/layouts/ResumePage";
+import Container from "./components/layouts/Container";
+import Layout from "./components/common/Layout";
+import GearsPage from "./app/gear/Gear";
+import useLenis from "./lib/useLenis";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.1,
-      duration: 1.2,
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    })
-
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-
-    return () => {
-      lenis.destroy()
-    }
-  }, [])
-
+  useLenis();
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Container>
@@ -63,7 +39,7 @@ function App() {
         </Layout>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
