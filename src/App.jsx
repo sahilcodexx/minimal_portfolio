@@ -16,6 +16,7 @@ import Layout from "./components/common/Layout";
 import GearsPage from "./app/gear/Gear";
 import useLenis from "./lib/useLenis";
 
+
 function App() {
   useLenis();
   return (

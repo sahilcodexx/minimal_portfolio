@@ -22,7 +22,8 @@ const BlogContent = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const projects = import.meta.glob("/src/components/data/blog/*.md", {
-    as: "raw",
+    query: '?raw',
+    import: 'default',
   });
   useEffect(() => {
     const loadBlog = async () => {

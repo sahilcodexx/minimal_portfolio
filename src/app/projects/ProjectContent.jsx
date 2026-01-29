@@ -23,7 +23,8 @@ const ProjectContent = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const projects = import.meta.glob("/src/components/data/projects/*.md", {
-    as: "raw",
+    query: '?raw',
+    import: 'default',
   });
   useEffect(() => {
     const loadBlog = async () => {

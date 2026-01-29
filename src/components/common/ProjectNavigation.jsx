@@ -9,7 +9,8 @@ export function ProjectNavigation({ slug }) {
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
   const projects = import.meta.glob("/src/components/data/projects/*.md", {
-    as: "raw",
+    query: '?raw',
+    import: 'default',
   });
 
   useEffect(() => {

@@ -9,7 +9,8 @@ export function BlogNavigation({ slug }) {
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
   const blog = import.meta.glob("/src/components/data/blog/*.md", {
-    as: "raw",
+    query: '?raw',
+    import: 'default',
   });
 
   useEffect(() => {
