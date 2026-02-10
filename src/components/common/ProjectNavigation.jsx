@@ -9,8 +9,8 @@ export function ProjectNavigation({ slug }) {
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
   const projects = import.meta.glob("/src/components/data/projects/*.md", {
-    query: '?raw',
-    import: 'default',
+    query: "?raw",
+    import: "default",
   });
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export function ProjectNavigation({ slug }) {
                     <div className="text-muted-foreground text-xs">
                       Next Project
                     </div>
-                    <div className="font-medium">{next.title}</div>
+                    <div className="font-medium text-wrap">{next.title}</div>
                   </div>
                   <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </div>
