@@ -36,7 +36,7 @@ export default function NextJs() {
           y2="160.5"
         >
           <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stop-opacity="0" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           gradientUnits="userSpaceOnUse"
@@ -47,7 +47,7 @@ export default function NextJs() {
           y2="106.875"
         >
           <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stop-opacity="0" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

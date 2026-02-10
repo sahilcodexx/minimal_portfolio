@@ -2,7 +2,7 @@ export default function LLM() {
   return (
     <svg
       fill="currentColor"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       height=""
       className="flex-none"
       viewBox="0 0 24 24"

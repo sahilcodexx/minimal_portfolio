@@ -33,10 +33,10 @@ export default function Php() {
           gradientTransform="matrix(84.04136 0 0 84.04136 38.426 42.169)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AEB2D5" />
-          <stop offset=".3" stop-color="#AEB2D5" />
-          <stop offset=".75" stop-color="#484C89" />
-          <stop offset="1" stop-color="#484C89" />
+          <stop stopColor="#AEB2D5" />
+          <stop offset=".3" stopColor="#AEB2D5" />
+          <stop offset=".75" stopColor="#484C89" />
+          <stop offset="1" stopColor="#484C89" />
         </radialGradient>
       </defs>
     </svg>
