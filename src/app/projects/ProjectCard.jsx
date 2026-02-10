@@ -1,5 +1,4 @@
 import Container from "@/components/layouts/Container";
-import React from "react";
 import {
   Card,
   CardContent,
@@ -18,12 +17,13 @@ import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
 import Skill from "@/components/common/Skills";
-const ProjectCard = ({ completed = ProjectCardData }) => {
+const ProjectCard = ({ completed = ProjectCardData, limit }) => {
+  const displayedProjects = limit ? completed.slice(-limit) : completed;
   return (
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
     >
-      {completed.map((items) => {
+      {displayedProjects.toReversed().map((items) => {
         return (
           <Motion.div
             key={items.id ?? items.title}

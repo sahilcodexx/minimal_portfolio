@@ -14,11 +14,10 @@ import ResumePage from "./components/layouts/ResumePage";
 import Container from "./components/layouts/Container";
 import Layout from "./components/common/Layout";
 import GearsPage from "./app/gear/Gear";
-import useLenis from "./lib/useLenis";
 
 
 function App() {
-  useLenis();
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Container>

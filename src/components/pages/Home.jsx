@@ -21,7 +21,7 @@ const Home = () => {
       <div>
         <Hero />
         <ExperienceCard />
-        <Project />
+        <Project  />
         <AboutMe />
         <Featured />
         <Blog />

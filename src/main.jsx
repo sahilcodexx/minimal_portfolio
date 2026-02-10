@@ -5,10 +5,12 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/common/ScrollToTop";
 import { PostHogProvider } from 'posthog-js/react';
+import {ReactLenis} from "./lib/lenis"
 import Posthogpageviewtracker from "./lib/posthogpageviewtracker";
 
 createRoot(document.getElementById("root")).render(
   <HelmetProvider>
+    <ReactLenis root>
     <PostHogProvider
       apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
       options={{
@@ -23,5 +25,6 @@ createRoot(document.getElementById("root")).render(
         <App />
       </BrowserRouter>
     </PostHogProvider>
+    </ReactLenis>
   </HelmetProvider>,
 );
