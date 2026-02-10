@@ -1,8 +1,11 @@
 import Motion from "@/svgs/FramerMotion";
 import ReactJs from "@/svgs/ReactJs";
+import { Convex } from "@/technologies/Convex";
+import { Firecrawl } from "@/technologies/FireCrawl";
 import Gsap from "@/technologies/Gsap";
 import JavaScript from "@/technologies/JavaScript";
 import NextJs from "@/technologies/NextJS";
+import { Supabase } from "@/technologies/Supabase";
 import TailwindCss from "@/technologies/TailwindCss";
 import TypeScript from "@/technologies/TypeScript";
 import Vite from "@/technologies/Vite";
@@ -34,6 +37,11 @@ export const ProjectCardData = [
         name: "React",
         icon: <ReactJs />,
         href: "https://reactjs.org/",
+      },
+      {
+        name: "TailwindCSS",
+        icon: <TailwindCss />,
+        href: "https://tailwindcss.com/",
       },
       {
         name: "TailwindCSS",
@@ -165,9 +173,9 @@ export const ProjectCardData = [
         href: "https://nextjs.org/",
       },
       {
-        name: "React",
-        icon: <ReactJs />,
-        href: "https://reactjs.org/",
+        name: "Convex",
+        icon: <Convex />,
+        href: "https://www.convex.dev/",
       },
       {
         name: "TailwindCSS",
@@ -203,19 +211,19 @@ export const ProjectCardData = [
         href: "https://www.typescriptlang.org/",
       },
       {
+        name: "Firecrawl",
+        icon: <Firecrawl />,
+        href: "https://firecrawl.dev/",
+      },
+      {
         name: "Next.js",
         icon: <NextJs />,
         href: "https://nextjs.org/",
       },
       {
-        name: "React",
-        icon: <ReactJs />,
-        href: "https://reactjs.org/",
-      },
-      {
-        name: "TailwindCSS",
-        icon: <TailwindCss />,
-        href: "https://tailwindcss.com/",
+        name: "SupaBase",
+        icon: <Supabase />,
+        href: "https://supabase.com/",
       },
     ],
     isWorking: false,

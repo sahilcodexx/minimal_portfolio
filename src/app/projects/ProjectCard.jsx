@@ -96,7 +96,7 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
                       Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {items.technologies.map((tech, idx) => {
+                      {items.technologies.slice(0,4).map((tech, idx) => {
                         return (
                           <Skill
                             className={"text-black/75 dark:text-white/75"}
