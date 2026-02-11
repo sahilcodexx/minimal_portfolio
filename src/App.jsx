@@ -15,6 +15,7 @@ import Container from "./components/layouts/Container";
 import Layout from "./components/common/Layout";
 import GearsPage from "./app/gear/Gear";
 import useLenis from "./lib/useLenis";
+import { Analytics } from "@vercel/analytics/react";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Footer />
         </Layout>
       </Container>
+      <Analytics />
     </ThemeProvider>
   );
 }
