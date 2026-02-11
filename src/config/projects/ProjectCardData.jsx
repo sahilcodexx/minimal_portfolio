@@ -28,18 +28,22 @@ export const ProjectCardData = [
       {
         name: "TypeScript",
         icon: <TypeScript />,
+        href: "https://www.typescriptlang.org/"
       },
       {
         name: "Next.js",
         icon: <NextJs />,
+        href: "https://nextjs.org/"
       },
       {
         name: "React",
         icon: <ReactJs />,
+        href: "https://reactjs.org/"
       },
       {
         name: "TailwindCSS",
         icon: <TailwindCss />,
+        href: "https://tailwindcss.com/"
       },
     ],
     isWorking: false,
@@ -67,18 +71,22 @@ export const ProjectCardData = [
       {
         name: "JavaScript",
         icon: <JavaScript />,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         name: "React",
         icon: <ReactJs />,
+        href: "https://reactjs.org/"
       },
       {
         name: "TailwindCSS",
         icon: <TailwindCss />,
+        href: "https://tailwindcss.com/"
       },
       {
         name: "Framer Motion",
         icon: <FramerMotion />,
+        href: "https://www.framer.com/motion/"
       },
     ],
     isWorking: true,
@@ -108,18 +116,22 @@ export const ProjectCardData = [
       {
         name: "JavaScript",
         icon: <JavaScript />,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         name: "GSAP",
         icon: <Gsap />,
+        href: "https://greensock.com/gsap/"
       },
       {
         name: "TailwindCSS",
         icon: <TailwindCss />,
+        href: "https://tailwindcss.com/"
       },
       {
         name: "Vite",
         icon: <Vite />,
+        href: "https://vitejs.dev/"
       },
     ],
     isWorking: true,
@@ -148,18 +160,22 @@ export const ProjectCardData = [
       {
         name: "JavaScript",
         icon: <JavaScript />,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         name: "React",
         icon: <ReactJs />,
+        href: "https://reactjs.org/"
       },
       {
         name: "TailwindCSS",
         icon: <TailwindCss />,
+        href: "https://tailwindcss.com/"
       },
       {
         name: "Vite",
         icon: <Vite />,
+        href: "https://vitejs.dev/"
       },
     ],
     isWorking: true,

@@ -6,7 +6,7 @@ import AboutMe from "../landing/AboutMe";
 import Featured from "../landing/Featured";
 import Blog from "@/blog/Blog";
 import ExperienceCard from "@/Experience/ExperienceCard";
-import Spotify from "../landing/Spotify";
+
 import CTA from "../landing/CTA";
 import { Helmet } from "react-helmet-async";
 import Setup from "../landing/Setup";

@@ -1,6 +1,5 @@
 import Container from "@/components/layouts/Container";
 import SectionHeading from "@/components/common/SectionHeading";
-import experience from "@/components/data/Experience";
 import { Link } from "react-router-dom";
 import {
   Tooltip,
@@ -11,6 +10,7 @@ import Website from "@/svgs/Website";
 import LinkedIn from "@/svgs/LinkedIn";
 import Skill from "@/components/common/Skills";
 import { motion as Motion } from "motion/react";
+import experience from "@/components/data/experience";
 
 const ExperienceContent = () => {
   return (
@@ -92,6 +92,17 @@ const ExperienceContent = () => {
                 </div>
               </div>
             </div>
+
+            <div className="text-muted-foreground flex flex-col">
+              {items.description.map((description) => (
+                <p
+                  key={description}
+                  dangerouslySetInnerHTML={{
+                    __html: `• ${description}`,
+                  }}
+                />
+              ))}
+            </div>
             <div>
               <h4 className="text-md mt-4 mb-2 font-semibold">
                 Technologies & Tools
@@ -107,16 +118,6 @@ const ExperienceContent = () => {
                   </Skill>
                 ))}
               </div>
-            </div>
-            <div className="text-muted-foreground flex flex-col">
-              {items.description.map((description) => (
-                <p
-                  key={description}
-                  dangerouslySetInnerHTML={{
-                    __html: `• ${description}`,
-                  }}
-                />
-              ))}
             </div>
           </Motion.div>
         );

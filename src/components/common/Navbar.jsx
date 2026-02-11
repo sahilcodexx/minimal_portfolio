@@ -43,6 +43,7 @@ export const Navbar = () => {
         </div>
         <ThemeToggel />
       </div>
+      
     </Container>
   );
 };

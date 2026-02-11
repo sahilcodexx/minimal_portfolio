@@ -76,8 +76,8 @@ const SkillTag = ({ skill }) => {
     <a
       href={skill.link}
       target="_blank"
-      rel="noopener noreferrer"
-      className="inset-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white"
+    rel="noopener noreferrer"
+      className=" inline-flex items-center self-end rounded-md border border-black/10 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/15 dark:bg-white/5 dark:text-white"
     >
       <div className="size-4 shrink-0">{skill.element}</div>
       <p className="ml-1 text-sm font-bold">{skill.name}</p>

@@ -5,6 +5,7 @@ import ResumeButton from "../landing/ResumeButton";
 import SocialLinks from "../landing/SocialLinks";
 import { motion as Motion } from "motion/react";
 
+
 const Hero = () => {
   return (
     <Container className={`flex flex-col items-start justify-center py-18`}>
@@ -29,7 +30,7 @@ const Hero = () => {
         className="mt-8"
       >
         <h2 className="text-4xl font-semibold text-neutral-700 dark:text-neutral-50">
-          Hi, I'm Sahil —
+          Sahil Singh —
           <span className="font-bold text-neutral-500/70 dark:text-neutral-400">
             {" "}
             Desgin Engineer.

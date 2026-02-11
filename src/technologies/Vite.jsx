@@ -1,9 +1,11 @@
-import React from "react";
-
 const Vite = () => {
   return (
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
+        style={{ filter: "drop-shadow(0 0 0.5px #000)" }}
+      >
         <defs>
           <linearGradient
             id="a"
@@ -23,7 +25,7 @@ const Vite = () => {
             x2="236.076"
             y1="8.818"
             y2="292.989"
-            gradientTransform="translate(0 .937) scale(.3122)"
+            gradientTransform="translate(0 .937) scale(.3322)"
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0" stopColor="#ffea83" />

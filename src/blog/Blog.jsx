@@ -15,6 +15,8 @@ const Blog = () => {
           <Button variant="outline">Show all Blogs</Button>
         </Link>
       </div>
+
+      
     </Container>
   );
 };

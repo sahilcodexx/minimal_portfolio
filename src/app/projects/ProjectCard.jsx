@@ -17,6 +17,7 @@ import Github from "@/svgs/Github";
 import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
+import Skill from "@/components/common/Skills";
 const ProjectCard = ({ completed = ProjectCardData }) => {
   return (
     <Container
@@ -95,16 +96,24 @@ const ProjectCard = ({ completed = ProjectCardData }) => {
                       Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {items.technologies.map((tech) => {
+                      {items.technologies.map((tech, idx) => {
                         return (
-                          <Tooltip key={tech.name}>
-                            <TooltipTrigger>
-                              <div className="size-6 transition-all duration-300 hover:scale-120 hover:cursor-pointer">
-                                {tech.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>{tech.name}</TooltipContent>
-                          </Tooltip>
+                          <Skill
+                            className={"text-black/75 dark:text-white/75"}
+                            key={idx}
+                            name={tech.name}
+                            href={tech.href}
+                          >
+                            {tech.icon}
+                          </Skill>
+                          // <Tooltip key={tech.name}>
+                          //   <TooltipTrigger>
+                          //     <div className="size-6 transition-all duration-300 hover:scale-120 hover:cursor-pointer">
+                          //       {tech.icon}
+                          //     </div>
+                          //   </TooltipTrigger>
+                          //   <TooltipContent>{tech.name}</TooltipContent>
+                          // </Tooltip>
                         );
                       })}
                     </div>

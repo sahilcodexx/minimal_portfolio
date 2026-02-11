@@ -15,6 +15,7 @@ const Project = () => {
           <Button variant="outline">Show all Projects</Button>
         </Link>
       </div>
+      
     </Container>
   );
 };
