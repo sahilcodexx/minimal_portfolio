@@ -10,12 +10,12 @@ import Website from "@/svgs/Website";
 import LinkedIn from "@/svgs/LinkedIn";
 import Skill from "@/components/common/Skills";
 import { motion as Motion } from "motion/react";
-import experience from "@/components/data/experience";
+import ExperienceCardData from "@/components/data/experience";
 
 const ExperienceContent = () => {
   return (
     <Container>
-      {experience.map((items) => {
+      {ExperienceCardData.map((items) => {
         return (
           <Motion.div
             initial={{ y: 40, opacity: 0 }}

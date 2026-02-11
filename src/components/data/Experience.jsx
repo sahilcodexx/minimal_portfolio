@@ -4,7 +4,7 @@ import Html from "@/technologies/Html";
 import JavaScript from "@/technologies/JavaScript";
 import TailwindCss from "@/technologies/TailwindCss";
 
-const experience = [
+const ExperienceCardData = [
   {
     company: "Zero Dimensions",
     position: "Frontend Developer Intern",
@@ -51,4 +51,4 @@ const experience = [
   },
 ];
 
-export default experience;
+export default ExperienceCardData;
