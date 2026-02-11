@@ -41,11 +41,10 @@ const ExperienceContent = () => {
                         {items.company}
                       </h3>
                       {items.x && (
-                        <Tooltip key={items.name} delayDuration={0}>
+                        <Tooltip delayDuration={0}>
                           <TooltipTrigger asChild>
                             <Link
                               to={items.x}
-                              key={items.name}
                               className="text-secondary flex items-center gap-2"
                             >
                               <span className="size-5">
@@ -58,12 +57,11 @@ const ExperienceContent = () => {
                           </TooltipContent>
                         </Tooltip>
                       )}
-                      {items.x && (
+                      {items.linkedin && (
                         <Tooltip delayDuration={0}>
                           <TooltipTrigger asChild>
                             <Link
                               to={items.linkedin}
-                              key={items.name}
                               className="text-secondary flex items-center gap-2"
                             >
                               <span className="size-5">
