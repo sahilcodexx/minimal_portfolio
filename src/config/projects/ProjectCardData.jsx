@@ -1,4 +1,4 @@
-import { Motion } from "@/svgs/FramerMotion";
+import Motion from "@/svgs/FramerMotion";
 import ReactJs from "@/svgs/ReactJs";
 import Gsap from "@/technologies/Gsap";
 import JavaScript from "@/technologies/JavaScript";
