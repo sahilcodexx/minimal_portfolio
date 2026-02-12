@@ -28,6 +28,8 @@ import Baseui from "@/technologies/Baseui";
 import Git from "@/technologies/Git";
 import Docker from "@/technologies/Docker";
 import ReactNavigation from "@/technologies/ReactNavigation";
+import { Bootstrap } from "@/technologies/BootStrap";
+import { Python } from "@/technologies/Python";
 export {
   ReactIcon,
   Bun,
@@ -59,4 +61,6 @@ export {
   Git,
   Docker,
   ReactNavigation,
+  Bootstrap,
+  Python,
 };

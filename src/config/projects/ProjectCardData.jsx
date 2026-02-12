@@ -1,5 +1,5 @@
+import { Motion } from "@/svgs/FramerMotion";
 import ReactJs from "@/svgs/ReactJs";
-import FramerMotion from "@/technologies/FramerMotion";
 import Gsap from "@/technologies/Gsap";
 import JavaScript from "@/technologies/JavaScript";
 import NextJs from "@/technologies/NextJS";
@@ -85,7 +85,7 @@ export const ProjectCardData = [
       },
       {
         name: "Framer Motion",
-        icon: <FramerMotion />,
+        icon: <Motion />,
         href: "https://www.framer.com/motion/"
       },
     ],

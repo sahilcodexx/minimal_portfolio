@@ -28,6 +28,8 @@ import {
   Git,
   Docker,
   ReactNavigation,
+  Bootstrap,
+  Python,
 } from "@/lib/techIcons";
 
 const TechSkills = () => {
@@ -35,7 +37,7 @@ const TechSkills = () => {
     <Container className={`mt-30`}>
       <SectionHeading subHeading={"Technologics"} heading={"Stack"} />
 
-      <div className="mt-3">
+      <div className="mt-3 flex flex-wrap gap-2.5 gap-y-4">
         {SkillsList.map((items) => {
           return (
             <Tooltip key={items.title}>
@@ -57,14 +59,25 @@ export default TechSkills;
 
 const SkillsList = [
   {
+    title: "TypeScript",
+    icon: <TypeScript />,
+    href: "https://www.typescriptlang.org/",
+  },
+
+  {
+    title: "JavaScript",
+    icon: <JavaScript />,
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
     title: "React",
     icon: <ReactIcon />,
     href: "https://reactjs.org/",
   },
   {
-    title: "JavaScript",
-    icon: <JavaScript />,
-    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    title: "NextJS",
+    icon: <NextJS />,
+    href: "https://nextjs.org/",
   },
   {
     title: "Bun",
@@ -86,11 +99,7 @@ const SkillsList = [
     icon: <MongoDB />,
     href: "https://www.mongodb.com/",
   },
-  {
-    title: "CSS",
-    icon: <Css />,
-    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
+
   {
     title: "Figma",
     icon: <Figma />,
@@ -106,16 +115,7 @@ const SkillsList = [
     icon: <Gsap />,
     href: "https://greensock.com/gsap/",
   },
-  {
-    title: "HTML",
-    icon: <Html />,
-    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    title: "NextJS",
-    icon: <NextJS />,
-    href: "https://nextjs.org/",
-  },
+
   {
     title: "PostgreSQL",
     icon: <PostgreSQL />,
@@ -131,11 +131,7 @@ const SkillsList = [
     icon: <TailwindCss />,
     href: "https://tailwindcss.com/",
   },
-  {
-    title: "TypeScript",
-    icon: <TypeScript />,
-    href: "https://www.typescriptlang.org/",
-  },
+
   {
     title: "Vite",
     icon: <Vite />,
@@ -181,4 +177,13 @@ const SkillsList = [
     icon: <ReactNavigation />,
     href: "https://reactnavigation.org/",
   },
+  {
+    title: "Bootstrap",
+    icon: <Bootstrap/>,
+    href: "https://getbootstrap.com/"
+  },{
+    title: "Python",
+    icon: <Python/>,
+    href: "https://www.python.org/"
+  }
 ];

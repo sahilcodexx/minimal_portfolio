@@ -1,36 +1,53 @@
 export default function NextJs() {
   return (
-    <svg viewBox="0 0 128 128">
-      <circle cx="64" cy="64" r="64"></circle>
-      <path
-        fill="url(#a)"
-        d="M106.317 112.014 49.167 38.4H38.4v51.179h8.614v-40.24l52.54 67.884a64.216 64.216 0 0 0 6.763-5.209z"
-      ></path>
-      <path fill="url(#b)" d="M81.778 38.4h8.533v51.2h-8.533z"></path>
+    <svg viewBox="0 0 180 180">
+      <mask
+        height="180"
+        id="nextjs_icon_dark__:r8:mask0_408_134"
+        maskUnits="userSpaceOnUse"
+        width="180"
+        x="0"
+        y="0"
+        style={{ maskType: "alpha" }}
+      >
+        <circle cx="90" cy="90" fill="black" r="90" />
+      </mask>
+      <g mask="url(#nextjs_icon_dark__:r8:mask0_408_134)">
+        <circle cx="90" cy="90" data-circle="true" fill="black" r="90" />
+        <path
+          d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
+          fill="url(#nextjs_icon_dark__:r8:paint0_linear_408_134)"
+        />
+        <rect
+          fill="url(#nextjs_icon_dark__:r8:paint1_linear_408_134)"
+          height="72"
+          width="12"
+          x="115"
+          y="54"
+        />
+      </g>
       <defs>
         <linearGradient
-          id="a"
+          gradientUnits="userSpaceOnUse"
+          id="nextjs_icon_dark__:r8:paint0_linear_408_134"
           x1="109"
           x2="144.5"
           y1="116.5"
           y2="160.5"
-          gradientTransform="scale(.71111)"
-          gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#fff"></stop>
-          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stop-opacity="0" />
         </linearGradient>
         <linearGradient
-          id="b"
+          gradientUnits="userSpaceOnUse"
+          id="nextjs_icon_dark__:r8:paint1_linear_408_134"
           x1="121"
           x2="120.799"
           y1="54"
           y2="106.875"
-          gradientTransform="scale(.71111)"
-          gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#fff"></stop>
-          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stop-opacity="0" />
         </linearGradient>
       </defs>
     </svg>
