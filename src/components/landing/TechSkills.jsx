@@ -20,23 +20,29 @@ import {
   TailwindCss,
   TypeScript,
   Vite,
-  Github,
-  LinkedIn,
-  Mail,
-  Website,
-  X,
+  Shadcn,
+  LLM,
+  Php,
+  Baseui,
+  Photoshop,
+  Git,
+  Docker,
+  ReactNavigation,
 } from "@/lib/techIcons";
 
 const TechSkills = () => {
   return (
     <Container className={`mt-30`}>
-      <SectionHeading subHeading={"About"} heading={"Me"} />
-      <div className="mt-8 flex flex-col gap-5 md:flex-row">
+      <SectionHeading subHeading={"Technologics"} heading={"Stack"} />
+
+      <div className="mt-3">
         {SkillsList.map((items) => {
           return (
             <Tooltip key={items.title}>
               <TooltipTrigger>
-                <div>{items.icon} </div>
+                <Link to={items.href}>
+                  <div className="mr-2 size-8">{items.icon}</div>
+                </Link>
               </TooltipTrigger>
               <TooltipContent>{items.title}</TooltipContent>
             </Tooltip>
@@ -136,28 +142,43 @@ const SkillsList = [
     href: "https://vitejs.dev/",
   },
   {
-    title: "GitHub",
-    icon: <Github />,
-    href: "https://github.com/",
+    title: "Shadcn",
+    icon: <Shadcn />,
+    href: "https://ui.shadcn.com/",
   },
   {
-    title: "LinkedIn",
-    icon: <LinkedIn />,
-    href: "https://linkedin.com/",
+    title: "LLM",
+    icon: <LLM />,
+    href: "https://en.wikipedia.org/wiki/Large_language_model",
   },
   {
-    title: "Email",
-    icon: <Mail />,
-    href: "mailto:your-email@example.com",
+    title: "PHP",
+    icon: <Php />,
+    href: "https://www.php.net/",
   },
   {
-    title: "Website",
-    icon: <Website />,
-    href: "https://your-website.com",
+    title: "BaseUI",
+    icon: <Baseui />,
+    href: "https://baseweb.design/",
   },
   {
-    title: "X (Twitter)",
-    icon: <X />,
-    href: "https://twitter.com/",
+    title: "Photoshop",
+    icon: <Photoshop />,
+    href: "https://www.adobe.com/products/photoshop.html",
+  },
+  {
+    title: "Git",
+    icon: <Git />,
+    href: "https://git-scm.com/",
+  },
+  {
+    title: "Docker",
+    icon: <Docker />,
+    href: "https://www.docker.com/",
+  },
+  {
+    title: "React Navigation",
+    icon: <ReactNavigation />,
+    href: "https://reactnavigation.org/",
   },
 ];

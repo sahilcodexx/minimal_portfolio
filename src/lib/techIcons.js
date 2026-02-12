@@ -20,7 +20,14 @@ import LinkedIn from "@/svgs/LinkedIn";
 import Mail from "@/svgs/Mail";
 import Website from "@/svgs/Website";
 import X from "@/svgs/X";
-
+import Shadcn from "@/technologies/Shadcn";
+import LLM from "@/technologies/LLM";
+import Php from "@/technologies/Php";
+import Photoshop from "@/technologies/Photoshop";
+import Baseui from "@/technologies/Baseui";
+import Git from "@/technologies/Git";
+import Docker from "@/technologies/Docker";
+import ReactNavigation from "@/technologies/ReactNavigation";
 export {
   ReactIcon,
   Bun,
@@ -44,4 +51,12 @@ export {
   Mail,
   Website,
   X,
+  Shadcn,
+  LLM,
+  Php,
+  Baseui,
+  Photoshop,
+  Git,
+  Docker,
+  ReactNavigation,
 };
