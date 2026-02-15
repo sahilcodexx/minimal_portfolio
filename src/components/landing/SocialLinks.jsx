@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "../layouts/Container";
-import Github from "@/svgs/Github";
-import LinkedIn from "@/svgs/LinkedIn";
-import Mail from "@/svgs/Mail";
-import X from "@/svgs/X.jsx";
+import Github from "@/components/icons/social/Github";
+import LinkedIn from "@/components/icons/social/LinkedIn";
+import Mail from "@/components/icons/social/Mail";
+import X from "@/components/icons/social/X.jsx";
 import {
   Tooltip,
   TooltipContent,

@@ -4,8 +4,8 @@ import Hero from "../layouts/Hero";
 import Project from "@/app/projects/Project";
 import AboutMe from "../landing/TechSkills";
 import Featured from "../landing/Featured";
-import Blog from "@/blog/Blog";
-import ExperienceCard from "@/Experience/ExperienceCard";
+import Blog from "@/app/blog/Blog";
+import ExperienceCard from "@/components/Experience/ExperienceCard";
 
 import CTA from "../landing/CTA";
 import { Helmet } from "react-helmet-async";
@@ -21,7 +21,7 @@ const Home = () => {
       <div>
         <Hero />
         <ExperienceCard />
-        <Project  />
+        <Project />
         <AboutMe />
         <Featured />
         <Blog />

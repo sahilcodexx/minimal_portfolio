@@ -1,14 +1,14 @@
-import Motion from "@/svgs/FramerMotion";
-import ReactJs from "@/svgs/ReactJs";
-import { Convex } from "@/technologies/Convex";
-import { Firecrawl } from "@/technologies/FireCrawl";
-import Gsap from "@/technologies/Gsap";
-import JavaScript from "@/technologies/JavaScript";
-import NextJs from "@/technologies/NextJS";
-import { Supabase } from "@/technologies/Supabase";
-import TailwindCss from "@/technologies/TailwindCss";
-import TypeScript from "@/technologies/TypeScript";
-import Vite from "@/technologies/Vite";
+import Motion from "@/components/icons/social/FramerMotion";
+import ReactJs from "@/components/icons/tech/ReactIcon";
+import { Convex } from "@/components/icons/tech/Convex";
+import { Firecrawl } from "@/components/icons/tech/FireCrawl";
+import Gsap from "@/components/icons/tech/Gsap";
+import JavaScript from "@/components/icons/tech/JavaScript";
+import NextJs from "@/components/icons/tech/NextJS";
+import { Supabase } from "@/components/icons/tech/Supabase";
+import TailwindCss from "@/components/icons/tech/TailwindCss";
+import TypeScript from "@/components/icons/tech/TypeScript";
+import Vite from "@/components/icons/tech/Vite";
 
 export const ProjectCardData = [
   {

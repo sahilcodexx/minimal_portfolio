@@ -1,8 +1,8 @@
-import CSS from "@/technologies/Css";
-import Figma from "@/technologies/Figma";
-import Html from "@/technologies/Html";
-import JavaScript from "@/technologies/JavaScript";
-import TailwindCss from "@/technologies/TailwindCss";
+import CSS from "@/components/icons/tech/Css";
+import Figma from "@/components/icons/tech/Figma";
+import Html from "@/components/icons/tech/Html";
+import JavaScript from "@/components/icons/tech/JavaScript";
+import TailwindCss from "@/components/icons/tech/TailwindCss";
 
 const ExperienceCardData = [
   {

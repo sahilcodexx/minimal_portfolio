@@ -1,8 +1,8 @@
-import Bun from "@/svgs/Bun";
-import Javascript from "@/svgs/Javascript";
-import MongoDb from "@/svgs/MongoDb";
-import NodeJs from "@/svgs/NodeJs";
-import ReactJs from "@/svgs/ReactJs";
+import Bun from "@/components/icons/tech/Bun";
+import Javascript from "@/components/icons/tech/JavaScript";
+import MongoDb from "@/components/icons/tech/MongoDB";
+import NodeJs from "@/components/icons/tech/NodeJS";
+import ReactJs from "@/components/icons/tech/ReactIcon";
 import React from "react";
 import { motion as Motion } from "motion/react";
 
@@ -76,8 +76,8 @@ const SkillTag = ({ skill }) => {
     <a
       href={skill.link}
       target="_blank"
-    rel="noopener noreferrer"
-      className=" inline-flex items-center self-end rounded-md border border-black/10 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/15 dark:bg-white/5 dark:text-white"
+      rel="noopener noreferrer"
+      className="inline-flex items-center self-end rounded-md border border-black/10 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/15 dark:bg-white/5 dark:text-white"
     >
       <div className="size-4 shrink-0">{skill.element}</div>
       <p className="ml-1 text-sm font-bold">{skill.name}</p>

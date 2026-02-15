@@ -5,7 +5,7 @@ import { Navbar } from "./components/common/Navbar";
 import Blogs from "./components/pages/Blogs";
 import ProjectContent from "./app/projects/ProjectContent";
 import Work from "./components/pages/Work";
-import BlogContent from "./blog/BlogContent";
+import BlogContent from "./app/blog/BlogContent";
 import Projects from "./components/pages/Projects";
 import Footer from "./components/common/Footer";
 import { Quote } from "./components/common/Quote";
@@ -15,9 +15,7 @@ import Container from "./components/layouts/Container";
 import Layout from "./components/common/Layout";
 import GearsPage from "./app/gear/Gear";
 
-
 function App() {
-
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Container>

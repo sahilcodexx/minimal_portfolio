@@ -6,8 +6,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Website from "@/svgs/Website";
-import LinkedIn from "@/svgs/LinkedIn";
+import Website from "@/components/icons/social/Website";
+import LinkedIn from "@/components/icons/social/LinkedIn";
 import Skill from "@/components/common/Skills";
 import { motion as Motion } from "motion/react";
 import ExperienceCardData from "@/components/data/ExperienceCardData";

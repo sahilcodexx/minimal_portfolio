@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
-import BlogCard from "@/blog/BlogCard";
+import BlogCard from "@/app/blog/BlogCard";
 import { BlogCardData } from "@/config/blog/BlogCardData";
 import { Helmet } from "react-helmet-async";
 

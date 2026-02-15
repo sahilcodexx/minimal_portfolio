@@ -3,7 +3,7 @@ import SectionHeading from "../common/SectionHeading";
 import Container from "../layouts/Container";
 import { Card } from "../ui/card";
 import { ArrowRight, Code } from "lucide-react";
-import Gear from "@/svgs/GearIcon";
+import Gear from "@/components/icons/social/GearIcon";
 
 const setup = [
   {

@@ -21,7 +21,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import Chat from "@/svgs/Chat";
+import Chat from "@/components/icons/social/Chat";
 import { Textarea } from "../ui/textarea";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../layouts/Container";
 import { Separator } from "../ui/separator";
-import ExperienceContent from "@/Experience/ExperienceContent";
+import ExperienceContent from "@/components/Experience/ExperienceContent";
 import { Helmet } from "react-helmet-async";
 
 const Work = () => {

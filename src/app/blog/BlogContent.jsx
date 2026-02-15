@@ -21,16 +21,16 @@ const BlogContent = () => {
   const [meta, setMeta] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const projects = import.meta.glob("/src/components/data/blog/*.md", {
-    query: '?raw',
-    import: 'default',
+  const projects = import.meta.glob("/src/data/blog/*.md", {
+    query: "?raw",
+    import: "default",
   });
   useEffect(() => {
     const loadBlog = async () => {
       try {
         setLoading(true);
 
-        const loader = projects[`/src/components/data/blog/${slug}.md`];
+        const loader = projects[`/src/data/blog/${slug}.md`];
 
         if (!loader) throw new Error("Project not found");
 

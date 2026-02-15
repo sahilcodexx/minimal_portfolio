@@ -1,12 +1,12 @@
-import Bun from "@/technologies/Bun";
-import JavaScript from "@/technologies/JavaScript";
-import MongoDB from "@/technologies/MongoDB";
-import NextJS from "@/technologies/NextJS";
-import NodeJS from "@/technologies/NodeJS";
-import PostgreSQL from "@/technologies/PostgreSQL";
-import Prisma from "@/technologies/Prisma";
-import ReactIcon from "@/technologies/ReactIcon";
-import TypeScript from "@/technologies/TypeScript";
+import Bun from "@/components/icons/tech/Bun";
+import JavaScript from "@/components/icons/tech/JavaScript";
+import MongoDB from "@/components/icons/tech/MongoDB";
+import NextJS from "@/components/icons/tech/NextJS";
+import NodeJS from "@/components/icons/tech/NodeJS";
+import PostgreSQL from "@/components/icons/tech/PostgreSQL";
+import Prisma from "@/components/icons/tech/Prisma";
+import ReactIcon from "@/components/icons/tech/ReactIcon";
+import TypeScript from "@/components/icons/tech/TypeScript";
 import { Badge } from "@/components/ui/badge";
 
 // Technology mapping

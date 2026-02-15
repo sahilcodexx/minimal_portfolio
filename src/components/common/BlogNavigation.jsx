@@ -8,9 +8,9 @@ import matter from "gray-matter";
 export function BlogNavigation({ slug }) {
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
-  const blog = import.meta.glob("/src/components/data/blog/*.md", {
-    query: '?raw',
-    import: 'default',
+  const blog = import.meta.glob("/src/data/blog/*.md", {
+    query: "?raw",
+    import: "default",
   });
 
   useEffect(() => {
@@ -57,7 +57,9 @@ export function BlogNavigation({ slug }) {
                     <div className="text-muted-foreground text-xs">
                       Previous blog
                     </div>
-                    <div className="font-medium text-wrap">{previous.title}</div>
+                    <div className="font-medium text-wrap">
+                      {previous.title}
+                    </div>
                   </div>
                 </div>
               </Link>

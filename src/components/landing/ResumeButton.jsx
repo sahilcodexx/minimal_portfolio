@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
-import SendIcon from "@/svgs/SendIcon";
-import Cv from "@/svgs/Cv";
+import SendIcon from "@/components/icons/social/SendIcon";
+import Cv from "@/components/icons/social/Cv";
 import Container from "../layouts/Container";
 import { motion as Motion } from "motion/react";
 import { Link } from "react-router-dom";

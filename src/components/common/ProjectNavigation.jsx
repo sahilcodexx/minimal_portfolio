@@ -8,7 +8,7 @@ import matter from "gray-matter";
 export function ProjectNavigation({ slug }) {
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
-  const projects = import.meta.glob("/src/components/data/projects/*.md", {
+  const projects = import.meta.glob("/src/data/projects/*.md", {
     query: "?raw",
     import: "default",
   });

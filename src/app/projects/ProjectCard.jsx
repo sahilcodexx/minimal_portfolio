@@ -11,8 +11,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Website from "@/svgs/Website";
-import Github from "@/svgs/Github";
+import Website from "@/components/icons/social/Website";
+import Github from "@/components/icons/social/Github";
 import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
@@ -96,7 +96,7 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
                       Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {items.technologies.slice(0,4).map((tech, idx) => {
+                      {items.technologies.slice(0, 4).map((tech, idx) => {
                         return (
                           <Skill
                             className={"text-black/75 dark:text-white/75"}

@@ -10,8 +10,8 @@ import Container from "@/components/layouts/Container";
 import { ProjectComponents } from "./ProjectComponents";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Website from "@/svgs/Website";
-import Github from "@/svgs/Github";
+import Website from "@/components/icons/social/Website";
+import Github from "@/components/icons/social/Github";
 import { Separator } from "@/components/ui/separator";
 import { ProjectNavigation } from "@/components/common/ProjectNavigation";
 import { BackButton } from "@/components/common/BackButton";
@@ -22,14 +22,14 @@ const ProjectContent = () => {
   const [meta, setMeta] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const projects = import.meta.glob("/src/components/data/projects/*.md", {
-    query: '?raw',
-    import: 'default',
+  const projects = import.meta.glob("/src/data/projects/*.md", {
+    query: "?raw",
+    import: "default",
   });
   useEffect(() => {
     const loadBlog = async () => {
       try {
-        const loader = projects[`/src/components/data/projects/${slug}.md`];
+        const loader = projects[`/src/data/projects/${slug}.md`];
 
         if (!loader) throw new Error("Project not found");
 
@@ -68,7 +68,7 @@ const ProjectContent = () => {
 
   return (
     <Container>
-      <BackButton text={'Back to Project'} />
+      <BackButton text={"Back to Project"} />
       <header className="mb-8 space-y-6">
         <div className="relative aspect-video overflow-hidden rounded-lg">
           <img

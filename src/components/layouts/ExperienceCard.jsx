@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "./Container";
 import SectionHeading from "../common/SectionHeading";
-import Website from "@/svgs/Website";
-import LinkedIn from "@/svgs/LinkedIn";
+import Website from "@/components/icons/social/Website";
+import LinkedIn from "@/components/icons/social/LinkedIn";
 import { Link } from "react-router-dom";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
@@ -10,7 +10,6 @@ const ExperienceCard = () => {
   return (
     <Container>
       <SectionHeading subHeading="Featured" heading="Experience" />
-    
     </Container>
   );
 };
