@@ -1,41 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "../layouts/Container";
 import SectionHeading from "../common/SectionHeading";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "./theme-provider";
 import { motion as Motion } from "motion/react";
+import { fetchGitHubContributions } from "@/api/github";
 
 const Featured = () => {
-  const token = import.meta.env.VITE_GITHUB_TOKEN;
   const [contributions, setContributions] = useState(0);
-  fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query: `
-      query {
-  user(login: "sahilcodexx") {
-    contributionsCollection {
-      contributionCalendar {
-        totalContributions
-      }
-    }
-  }
-}
-    `,
-    }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      setContributions(
-        data.data.user.contributionsCollection.contributionCalendar
-          .totalContributions,
-      );
-    });
 
+  useEffect(() => {
+    const loadContributions = async () => {
+      const count = await fetchGitHubContributions();
+      setContributions(count);
+    };
+    loadContributions();
+  }, []);
+  
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 

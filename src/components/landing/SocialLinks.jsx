@@ -1,5 +1,3 @@
-import React from "react";
-import Container from "../layouts/Container";
 import Github from "@/components/icons/social/Github";
 import LinkedIn from "@/components/icons/social/LinkedIn";
 import Mail from "@/components/icons/social/Mail";
@@ -15,32 +13,30 @@ import { Link } from "react-router-dom";
 
 const SocialLinks = () => {
   return (
-    <Container className={`pl-0`}>
-      <Motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        viewport={{ once: true }}
-        className="mt-8 flex gap-2"
-      >
-        {socialLinks.map((link) => (
-          <Tooltip key={link.name} delayDuration={0}>
-            <TooltipTrigger asChild>
-              <Link
-                to={link.href}
-                key={link.name}
-                className="text-secondary flex items-center gap-2"
-              >
-                <span className="size-6">{link.icon}</span>
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{link.name}</p>
-            </TooltipContent>
-          </Tooltip>
-        ))}
-      </Motion.div>
-    </Container>
+    <Motion.div
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="mt-8 flex  gap-2"
+    >
+      {socialLinks.map((link) => (
+        <Tooltip key={link.name} delayDuration={0}>
+          <TooltipTrigger asChild>
+            <Link
+              to={link.href}
+              key={link.name}
+              className="text-secondary flex items-center gap-2"
+            >
+              <span className="size-6">{link.icon}</span>
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{link.name}</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
+    </Motion.div>
   );
 };
 
