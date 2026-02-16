@@ -1,27 +1,43 @@
 export const quotes = [
   {
-    quote: `A man who is master of patience is master of everything else.`,
-    author: 'George Savile',
-  },
-  {
     quote: `You have a right to perform your prescribed duty, but you are not
             entitled to the fruits of actions.`,
-    author: 'Bhagavad Gita',
+    author: "Bhagavad Gita",
   },
   {
-    quote: `Man is made by his belief. As he believes, so he is.`,
-    author: 'Bhagavad Gita',
+    quote: `The only way to do great work is to love what you do.`,
+    author: "Steve Jobs",
   },
   {
-    quote: `Arise, awake, and stop not till the goal is reached.`,
-    author: 'Katha Upanishad',
+    quote: `Life is what happens when you're busy making other plans.`,
+    author: "John Lennon",
   },
   {
-    quote: `If the pain doesn't kill me, it will only make me stronger.`,
-    author: 'Sung Jin-Woo, Solo Leveling',
+    quote: `The future belongs to those who believe in the beauty of their dreams.`,
+    author: "Eleanor Roosevelt",
   },
   {
-    quote: `I’ll take a potato chip… AND EAT IT!`,
-    author: 'Light Yagami, Death Note',
+    quote: `The best way to predict the future is to create it.`,
+    author: "Peter Drucker",
+  },
+  {
+    quote: `The greatest glory in living lies not in never falling, but in rising every time we fall.`,
+    author: "Nelson Mandela",
+  },
+  {
+    quote: `In the end, it's not the years in your life that count. It's the life in your years.`,
+    author: "Abraham Lincoln",
+  },
+  {
+    quote: `The way to get started is to quit talking and begin doing.`,
+    author: "Walt Disney",
+  },
+  {
+    quote: `Pain builds character.`,
+    author: "Me",
+  },
+  {
+    quote: `Success is not final, failure is not fatal: it is the courage to continue that counts.`,
+    author: "Winston Churchill",
   },
 ];
