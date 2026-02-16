@@ -12,7 +12,7 @@ const Container = ({ children, className }) => {
       viewport={{ once: true }}
       className={`container mx-auto max-w-3xl px-2.5 font-sans ${className} `}
     >
-      {children}{" "}
+      {children}
     </Motion.div>
   );
 };
