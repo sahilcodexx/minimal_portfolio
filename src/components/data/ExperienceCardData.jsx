@@ -10,7 +10,7 @@ const ExperienceCardData = [
     position: "Frontend Developer Intern",
     location: "Ahmedabad, India (On-Site)",
     image:
-      "https://ramx.in/_next/image?url=%2Fcompany%2Fpromote.png&w=256&q=75",
+      "/company.webp",
     description: [
       "Developed and maintained web applications using HTML, CSS, and JavaScript.",
       "Collaborated with cross-functional teams to deliver high-quality software on time.",

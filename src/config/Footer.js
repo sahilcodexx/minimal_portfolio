@@ -1,5 +1,5 @@
 export const footerConfig = {
-  developer: 'SahilCodeX',
+  developer: 'SahilCodex',
   text: 'Design & Developed by',
   copyright: 'All rights reserved.',
 };

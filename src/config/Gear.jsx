@@ -7,11 +7,11 @@ export const devices = [
   },
 
   {
-    name: "Magic Keyboard",
+    name: "ANT Esports MK1000",
     icon: <Keyboard className="size-4" />,
   },
   {
-    name: "ANT Esports MK1000",
+    name: "HP 5500 Wireless",
     icon: <Mouse className="size-4" />,
   },
   {
