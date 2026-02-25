@@ -13,6 +13,7 @@ import { CalendarRange } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { BackButton } from "@/components/common/BackButton";
 import { BlogNavigation } from "@/components/common/BlogNavigation";
+import { Helmet } from "react-helmet-async";
 window.Buffer = Buffer;
 
 const BlogContent = () => {
@@ -66,7 +67,20 @@ const BlogContent = () => {
   }
 
   return (
-    <Container>
+    <>
+      <Helmet>
+        <title>{meta.title || "Blog"}</title>
+        <meta name="description" content={meta.description || ""} />
+        <meta property="og:title" content={meta.title || "Blog"} />
+        <meta property="og:description" content={meta.description || ""} />
+        <meta property="og:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
+        <meta property="og:url" content={`https://sahilcodex.vercel.app/blogs/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:title" content={meta.title || "Blog"} />
+        <meta name="twitter:description" content={meta.description || ""} />
+        <meta name="twitter:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
+      </Helmet>
+      <Container>
       <BackButton text={"Back to Blog"} />
       <article className="mx-auto max-w-4xl">
         {/* ===== BLOG HEADER ===== */}
@@ -110,6 +124,7 @@ const BlogContent = () => {
       </article>
       <BlogNavigation slug={slug} />
     </Container>
+    </>
   );
 };
 

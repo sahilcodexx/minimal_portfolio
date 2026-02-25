@@ -15,6 +15,7 @@ import Github from "@/components/icons/social/Github";
 import { Separator } from "@/components/ui/separator";
 import { ProjectNavigation } from "@/components/common/ProjectNavigation";
 import { BackButton } from "@/components/common/BackButton";
+import { Helmet } from "react-helmet-async";
 
 const ProjectContent = () => {
   const { slug } = useParams();
@@ -67,7 +68,20 @@ const ProjectContent = () => {
   }
 
   return (
-    <Container>
+    <>
+      <Helmet>
+        <title>{meta.title || "Project"}</title>
+        <meta name="description" content={meta.description || ""} />
+        <meta property="og:title" content={meta.title || "Project"} />
+        <meta property="og:description" content={meta.description || ""} />
+        <meta property="og:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
+        <meta property="og:url" content={`https://sahilcodex.vercel.app/projects/${slug}`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={meta.title || "Project"} />
+        <meta name="twitter:description" content={meta.description || ""} />
+        <meta name="twitter:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
+      </Helmet>
+      <Container>
       <BackButton text={"Back to Project"} />
       <header className="mb-8 space-y-6">
         <div className="relative aspect-video overflow-hidden rounded-lg">
@@ -237,6 +251,7 @@ const ProjectContent = () => {
       </ReactMarkdown>
       <ProjectNavigation slug={slug} />
     </Container>
+    </>
   );
 };
 
