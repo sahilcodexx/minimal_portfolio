@@ -13,7 +13,6 @@ import { CalendarRange } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { BackButton } from "@/components/common/BackButton";
 import { BlogNavigation } from "@/components/common/BlogNavigation";
-import { Helmet } from "react-helmet-async";
 window.Buffer = Buffer;
 
 const BlogContent = () => {
@@ -67,23 +66,9 @@ const BlogContent = () => {
   }
 
   return (
-    <>
-      <Helmet>
-        <title>{meta.title || "Blog"}</title>
-        <meta name="description" content={meta.description || ""} />
-        <meta property="og:title" content={meta.title || "Blog"} />
-        <meta property="og:description" content={meta.description || ""} />
-        <meta property="og:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
-        <meta property="og:url" content={`https://sahilcodex.vercel.app/blogs/${slug}`} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:title" content={meta.title || "Blog"} />
-        <meta name="twitter:description" content={meta.description || ""} />
-        <meta name="twitter:image" content={meta.image ? `https://sahilcodex.vercel.app${meta.image}` : "https://sahilcodex.vercel.app/og-image.png"} />
-      </Helmet>
-      <Container>
+    <Container>
       <BackButton text={"Back to Blog"} />
       <article className="mx-auto max-w-4xl">
-        {/* ===== BLOG HEADER ===== */}
         <header className="mb-8 space-y-6">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <img src={meta.image} alt={meta.title} className="object-cover" />
@@ -91,7 +76,7 @@ const BlogContent = () => {
 
           <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
-              {meta.tags.map((tag) => (
+              {meta.tags?.map((tag) => (
                 <Badge key={tag} variant="default">
                   {tag}
                 </Badge>
@@ -113,7 +98,6 @@ const BlogContent = () => {
           <Separator />
         </header>
 
-        {/* ===== BLOG CONTENT (YOUR UI HERE) ===== */}
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight]}
@@ -124,7 +108,6 @@ const BlogContent = () => {
       </article>
       <BlogNavigation slug={slug} />
     </Container>
-    </>
   );
 };
 
