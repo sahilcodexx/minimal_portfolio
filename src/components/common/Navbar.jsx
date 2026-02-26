@@ -33,13 +33,13 @@ export const Navbar = () => {
             ease: [0.22, 1, 0.36, 1],
           },
         }}
-        className={`m-auto flex w-full items-center justify-between gap-2 border-b md:px-6 px-3 md:py-4 py-3 backdrop-blur-md ${
+        className={`m-auto flex w-full items-center justify-between gap-2 border-b px-3 py-3 backdrop-blur-md md:px-6 md:py-4 ${
           scrolled && "rounded-2xl border md:py-3 "
         }`}
       >
         <div>
           <div className="box-border h-12 w-12 overflow-hidden rounded-md border-2 border-neutral-300 bg-blue-300 p-1 duration-200 hover:scale-90 dark:border-neutral-200 dark:bg-yellow-300">
-            <Link to={"/ "}>
+            <Link to="/">
               <img
                 src="./Avatar.png"
                 alt="Avatar"

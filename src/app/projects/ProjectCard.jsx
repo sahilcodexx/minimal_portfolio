@@ -23,28 +23,29 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
     >
-      {displayedProjects.toReversed().map((items) => {
+      {displayedProjects.toReversed().map((items, index) => {
         return (
           <Motion.div
             key={items.id ?? items.title}
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-              delay: 0.2 * items.id,
+              duration: 0.4,
+              ease: [0.25, 0.1, 0.25, 1],
+              delay: index * 0.1,
             }}
-            viewport={{ once: true }}
-            layout
-            className="flex flex-col gap-4"
+            viewport={{ once: true, margin: "-50px" }}
+            className="flex flex-col gap-4 will-change-transform"
           >
             <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm dark:border-gray-800">
-              <CardHeader className="p-0">
+              <CardHeader className="overflow-hidden p-0">
                 <img
                   width={1920}
                   height={1080}
                   src={items.img.src}
                   alt={items.img.alt}
+                  loading="lazy"
+                  className="transition-transform duration-300 group-hover:scale-105"
                 />
               </CardHeader>
               <CardContent>
