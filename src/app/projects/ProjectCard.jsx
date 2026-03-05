@@ -6,11 +6,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import Website from "@/components/icons/social/Website";
 import Github from "@/components/icons/social/Github";
 import { ArrowRight } from "lucide-react";
@@ -57,36 +52,24 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
                       </h3>
                     </Link>
                     <div className="flex items-center gap-2">
-                      <Tooltip>
-                        <TooltipTrigger>
-                          <Link
-                            to={items.links.website}
-                            className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
-                            href=""
-                            target="_blank"
-                          >
-                            <Website />
-                          </Link>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>View Website</p>
-                        </TooltipContent>
-                      </Tooltip>
-                      <Tooltip>
-                        <TooltipTrigger>
-                          <Link
-                            to={items.links.github}
-                            className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
-                            href=""
-                            target="_blank"
-                          >
-                            <Github />
-                          </Link>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>View GitHub</p>
-                        </TooltipContent>
-                      </Tooltip>
+                      <Link
+                        to={items.links.website}
+                        className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
+                        href=""
+                        target="_blank"
+                        title="View Website"
+                      >
+                        <Website />
+                      </Link>
+                      <Link
+                        to={items.links.github}
+                        className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
+                        href=""
+                        target="_blank"
+                        title="View GitHub"
+                      >
+                        <Github />
+                      </Link>
                     </div>
                   </div>
                   <p className="text-secondary line-clamp-3">

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { ThemeProvider } from "./components/landing/theme-provider";
 import Home from "./components/pages/Home";
 import { Navbar } from "./components/common/Navbar";
@@ -14,8 +14,14 @@ import ResumePage from "./components/layouts/ResumePage";
 import Container from "./components/layouts/Container";
 import Layout from "./components/common/Layout";
 import GearsPage from "./app/gear/Gear";
+import { useEffect } from "react";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.va("send", "pageview");
+  }, [location.pathname]);
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Container>
