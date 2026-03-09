@@ -46,6 +46,7 @@ const Featured = () => {
             blockMargin={5}
             colorScheme={currentTheme === "dark" ? "dark" : "light"}
             showTotalCount={false}
+            year={2026}
           />
         </Motion.div>
       </div>

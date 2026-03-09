@@ -22,8 +22,8 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
         return (
           <Motion.div
             key={items.id ?? items.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, filter : "blur(0)" }}
             transition={{
               duration: 0.4,
               ease: [0.25, 0.1, 0.25, 1],
@@ -32,7 +32,7 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
             viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col gap-4 will-change-transform"
           >
-            <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-sm dark:border-gray-800">
+            <Card className="group h-full w-full overflow-hidden border-transparent ring ring-gray-200/70 p-0 shadow-sm dark:ring-neutral-800">
               <CardHeader className="overflow-hidden p-0">
                 <img
                   width={1920}
