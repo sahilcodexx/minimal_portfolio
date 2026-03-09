@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Container from "@/components/layouts/Container";
 import {
   Card,
@@ -12,36 +13,42 @@ import { ArrowRight } from "lucide-react";
 import { ProjectCardData } from "@/config/projects/ProjectCardData";
 import { motion as Motion } from "motion/react";
 import Skill from "@/components/common/Skills";
+
 const ProjectCard = ({ completed = ProjectCardData, limit }) => {
-  const displayedProjects = limit ? completed.slice(-limit) : completed;
+  const displayedProjects = useMemo(() => {
+    const arr = limit ? [...completed].slice(-limit) : [...completed];
+    return arr.reverse();
+  }, [completed, limit]);
+
   return (
     <Container
       className={`mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2`}
     >
-      {displayedProjects.toReversed().map((items, index) => {
+      {displayedProjects.map((items, index) => {
         return (
           <Motion.div
             key={items.id ?? items.title}
-            initial={{ opacity: 0, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, filter : "blur(0)" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               duration: 0.4,
+              delay: index * 0.08,
               ease: [0.25, 0.1, 0.25, 1],
-              delay: index * 0.1,
             }}
             viewport={{ once: true, margin: "-50px" }}
-            className="flex flex-col gap-4 will-change-transform"
+            className="will-change-opacity flex flex-col gap-4"
           >
-            <Card className="group h-full w-full overflow-hidden border-transparent ring ring-gray-200/70 p-0 shadow-sm dark:ring-neutral-800">
-              <CardHeader className="overflow-hidden p-0">
-                <img
-                  width={1920}
-                  height={1080}
-                  src={items.img.src}
-                  alt={items.img.alt}
-                  loading="lazy"
-                  className="transition-transform duration-300 group-hover:scale-105"
-                />
+            <Card className="group h-full w-full overflow-hidden border border-gray-200/70 p-0 shadow-sm dark:border-neutral-800">
+              <CardHeader className="p-0">
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    width={1920}
+                    height={1080}
+                    src={items.img.src}
+                    alt={items.img.alt}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -90,14 +97,6 @@ const ProjectCard = ({ completed = ProjectCardData, limit }) => {
                           >
                             {tech.icon}
                           </Skill>
-                          // <Tooltip key={tech.name}>
-                          //   <TooltipTrigger>
-                          //     <div className="size-6 transition-all duration-300 hover:scale-120 hover:cursor-pointer">
-                          //       {tech.icon}
-                          //     </div>
-                          //   </TooltipTrigger>
-                          //   <TooltipContent>{tech.name}</TooltipContent>
-                          // </Tooltip>
                         );
                       })}
                     </div>
