@@ -149,7 +149,7 @@ export const ProjectCardData = [
     id: 4,
     title: "Image Editor AI",
     img: {
-      src: "/comingsoon.webp",
+      src: "/projects/project4.webp",
       alt: "Image Editor AI project image",
       width: 1920,
       height: 1080,
