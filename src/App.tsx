@@ -20,7 +20,9 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    window.va("send", "pageview");
+    if (window.va) {
+      window.va("send", "pageview");
+    }
   }, [location.pathname]);
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">

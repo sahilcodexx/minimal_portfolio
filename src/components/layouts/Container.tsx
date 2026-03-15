@@ -1,6 +1,12 @@
 import { motion as Motion } from "motion/react";
+import { ReactNode } from "react";
 
-const Container = ({ children, className }) => {
+interface ContainerProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const Container = ({ children, className }: ContainerProps) => {
   return (
     <Motion.div
       initial={{ y: 20, opacity: 0 }}
